@@ -1,0 +1,26 @@
+Device name: Tesla P100-PCIE-16GB
+Compute capability: 6.0
+max work item within one work group size for dimension 0 : 1024
+Max work item size for dimension 0: 1024
+Max work item size for dimension 1: 1024
+Max work item size for dimension 2: 64
+m.atoms.size() == 33
+ Call to kernel_monte function 
+completed the main_procedure_cl
+
+Refining ligand ./input_file_example/2bm2_ligand results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -8.9      0.000      0.000
+   2         -8.6      4.258      6.708
+   3         -8.5      2.606      3.597
+   4         -8.4      4.287      6.753
+   5         -8.3      0.935      1.282
+   6         -8.2      4.701      7.308
+   7         -8.1      5.323      7.958
+   8         -8.1      2.693      3.642
+   9         -8.0      4.919      7.171
+Writing ligand ./input_file_example/2bm2_ligand output...done.
+
+AutoDockVina-GPU3 total runtime = 11.626 s

@@ -1,0 +1,13 @@
+center_x = -30.661
+center_y = -29.540
+center_z = 17.010
+
+size_x = 24.0
+size_y = 26.25
+size_z = 22.5
+
+receptor =./input_file_example/1u1b_protein.pdbqt
+ligand = ./input_file_example/docking_ligand_50/BACE_1_ligand.pdbqt
+
+search_depth = 50
+thread = 16384
