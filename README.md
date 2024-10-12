@@ -32,6 +32,8 @@ In this project, we propose **Vina-CUDA** based on [Vina-GPU 2.1](https://github
 |-DSAMLL_BOX|the volume of the searching box less than 30/30/30 (will take less GPU memory)|
 |-DLARGE_BOX|the volume of the searching box less than 70/70/70 (will take more GPU memory)
 
+### Windows
+The usage on the Windows platform can be referenced from the Vina-GPU 2.1 [documentation](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1?tab=readme-ov-file#windows) .
 
 ## Usage
 |Arguments| Description|Default value
@@ -45,3 +47,11 @@ In this project, we propose **Vina-CUDA** based on [Vina-GPU 2.1](https://github
 |--search_depth| the number of searching iterations in each docking lane| heuristically determined
 |--center_x/y/z|the center of searching box in the receptor|no default
 |--size_x/y/z|the volume of the searching box|no default 
+
+## Limitation
+1. Since the number of threads, the size of the docking box, and the ligand atom number are directly related to the GPU memory allocation in the program, their values should not exceed 10,000, 70×70×70, and 100, respectively.
+2. Due to the variability of random seed values, the docking score error ranges from 0.1 to 0.5 in each run (this phenomenon also occurs in Vina-GPU 2.1).
+
+## Citation
+* Trott, Oleg, and Arthur J. Olson. "AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading." Journal of computational chemistry 31.2 (2010): 455-461.
+* Tang S, Ding J, Zhu X, et al. Vina-GPU 2.1: towards further optimizing docking speed and precision of AutoDock Vina and its derivatives[J]. IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2024.
