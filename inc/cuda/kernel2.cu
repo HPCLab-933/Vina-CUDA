@@ -66,7 +66,7 @@ __device__ inline bool metropolis_accept(flo old_f, flo new_f, flo temperature, 
 		return true;
 	const flo acceptance_probability = exp((old_f - new_f) / temperature);
 	bool res = n < acceptance_probability;
-	// return n < acceptance_probability; lcf-debug // why not return the res ????
+	// return n < acceptance_probability;  // why not return the res ????
 	return res;
 }
 
@@ -91,32 +91,6 @@ __global__ void kernel2(
 	const int max_bfgs_steps,
 	const int rilc_bfgs_enable)
 {
-
-	// printf("stop the program running"); assert(false);
-
-	// m_cutoff_sqr_rr =  pre->m_cutoff_sqr;
-	// printf("LCF-DEBUG the two pre->m_cutoff_sqrr: %f \n",m_cutoff_sqr_rr);
-	// for (int i = 0; i < 50; i++) {
-	//	n = mg->atoms[i].types[0];
-	//	printf("m_ptr->atoms[%d].types[0] = %d \n", i, n);
-	// }
-
-	// printf("m_ptr->atoms[i].types[0] = %d \n",n);
-	// printf("m_ptr->atoms[i].types[1] = %d \n",m);
-	// printf("m_ptr->atoms[i].types[2] = %d \n",q);
-	// printf("m_ptr->atoms[i].types[3] = %d \n",t);
-
-	// for (int i = 0; i < 3; i++) {
-	//	printf("m_ptr->atoms[i].types[0] = %d \n",&mg->atoms[i].types[0]);
-	//	printf("m_ptr->atoms[i].types[1] = %d \n",&mg->atoms[i].types[1]);
-	//	printf("m_ptr->atoms[i].types[2] = %d \n",&mg->atoms[i].types[2]);
-	//	printf("m_ptr->atoms[i].types[3] = %d \n",&mg->atoms[i].types[3]);
-	// }
-	/* 锟杰癸拷锟斤拷一锟斤拷block锟斤拷锟斤拷泄锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷停锟�
-		1.output_type_cl* ric,
-
-
-	*/
 	int gx = blockIdx.x * blockDim.x + threadIdx.x;
 	int gy = blockIdx.y * blockDim.y + threadIdx.y;
 	int gs = gridDim.x * blockDim.x;
@@ -282,9 +256,6 @@ __global__ void kernel2_update(
 
 	__shared__ output_type_cl best_out;
 	__shared__ output_type_cl candidate;
-
-	//__shared__ rigid_cl m_gpu_rigid; // lcf add new
-	//m_gpu_rigid = m_gpu->ligand.rigid;   // lcf add new
 
 	__shared__ ligand_gpu m_gpu_ligand;
 	m_gpu_ligand.rigid = m_gpu->ligand.rigid;
@@ -476,7 +447,7 @@ void kernel_monte(
 	cudaEventSynchronize(time2);
 
 	cudaEventElapsedTime(&kernalExecutionTime, time1, time2);
-	// printf("\nLCF-debug-the-program");
+
 	// printf("\nElapsed time for kernel_monte-GPU calculation: %0.6f s \n", kernalExecutionTime / 1000);
 
 	cudaEventDestroy(time1);

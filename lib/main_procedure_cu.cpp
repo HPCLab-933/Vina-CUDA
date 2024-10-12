@@ -122,11 +122,6 @@ std::vector<output_type> cl_to_vina(output_type_cl result_ptr[],
 	}
 	return results_vina;
 }
-// lcf-debug
-/*
-void main_procedure_cl(cache& c, const std::vector<model>& ms,  const precalculate& p, const parallel_mc par,
-	const vec& corner1, const vec& corner2, const int seed, std::vector<output_container>& outs, std::string opencl_binary_path,
-	const std::vector<std::vector<std::string>> ligand_names, const int rilc_bfgs) */
 
 void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculate &p, const parallel_mc par,
 					   const vec &corner1, const vec &corner2, const int seed, std::vector<output_container> &outs,
@@ -148,11 +143,6 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 	std::cout << "Device name: " << props.name << " || " << "Compute capability: " << props.major << "." << props.minor << std::endl;
 	// std::cout << "Compute capability: " << props.major << "." << props.minor << std::endl;
 	// std::cout << "The maxThreadsPerBlock is : " << max_wg_size << std::endl;
-
-	// int max_wi_size[3];
-	// max_wi_size[0] = props.maxThreadsDim[0];
-	// max_wi_size[1] = props.maxThreadsDim[1];
-	// max_wi_size[2] = props.maxThreadsDim[2];
 
 	// std::cout<<"The maxThreadsPerBlock is : "<<max_wg_size<<std::endl;
 
@@ -210,7 +200,6 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 	}
 	// change g(s);
 
-	// quasi_newton quasi_newton_par; const int quasi_newton_par_max_steps = par.mc.ssd_par.evals;
 	/**********************************************************************************/
 	/************************ Kernel1  & Allocate GPU memory **************************/
 	/**********************************************************************************/
@@ -412,60 +401,9 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 	/**************************************************************************/
 	/************************    Allocate GPU memory    ***********************/
 	/**************************************************************************/
-	// cudaError_t err;
-	// cudaStream_t stream = 0;
-	// checkCUDA(cudaStreamCreate(&stream));
 
-	/**
-	 *  extern boost::timer::cpu_timer boost
-	 */
-	/*
-	pre_cl *pre_gpu;
-	checkCUDA(cudaMalloc((void **)&pre_gpu, pre_size));
-	// cudaMemcpy(pre_gpu, pre_ptr, pre_size, cudaMemcpyHostToDevice);
-	checkCUDA(cudaMemcpy(pre_gpu, pre_ptr, pre_size, cudaMemcpyHostToDevice));
-
-	pa_cl *pa_gpu;
-	checkCUDA(cudaMalloc((void **)&pa_gpu, pa_size));
-	// cudaMemcpy(pa_gpu, pa_ptr, pa_size, cudaMemcpyHostToDevice);
-	checkCUDA(cudaMemcpy(pa_gpu, pa_ptr, pa_size, cudaMemcpyHostToDevice));
-
-	gb_cl *gb_gpu;
-	checkCUDA(cudaMalloc((void **)&gb_gpu, gb_size));
-	// cudaMemcpy(gb_gpu, gb_ptr, gb_size, cudaMemcpyHostToDevice);
-	checkCUDA(cudaMemcpy(gb_gpu, gb_ptr, gb_size, cudaMemcpyHostToDevice));
-
-	ar_cl *ar_gpu;
-	checkCUDA(cudaMalloc((void **)&ar_gpu, ar_size));
-	// cudaMemcpy(ar_gpu, ar_ptr, ar_size, cudaMemcpyHostToDevice);
-	checkCUDA(cudaMemcpy(ar_gpu, ar_ptr, ar_size, cudaMemcpyHostToDevice));
-
-	grids_cl *grids_gpu;
-	checkCUDA(cudaMalloc((void **)&grids_gpu, grids_size));
-	// cudaMemcpy(grids_gpu, grids_ptr, grids_size, cudaMemcpyHostToDevice);
-	checkCUDA(cudaMemcpy(grids_gpu, grids_ptr, grids_size, cudaMemcpyHostToDevice));
-
-	float *needed_gpu;
-	checkCUDA(cudaMalloc((void **)&needed_gpu, mis_ptr->needed_size * sizeof(float)));
-	// cudaMemcpy(needed_gpu, needed_ptr, mis_ptr->needed_size * sizeof(float), cudaMemcpyHostToDevice);
-	checkCUDA(cudaMemcpy(needed_gpu, needed_ptr, mis_ptr->needed_size * sizeof(float), cudaMemcpyHostToDevice));
-
-	mis_cl *mis_gpu;
-	checkCUDA(cudaMalloc((void **)&mis_gpu, mis_size));
-	// cudaMemcpy(mis_gpu, mis_ptr, mis_size, cudaMemcpyHostToDevice);
-	checkCUDA(cudaMemcpy(mis_gpu, mis_ptr, mis_size, cudaMemcpyHostToDevice));
-	*/
-
-	// Make sure all streams have finished their work before continuing
-	// checkCUDA(cudaStreamSynchronize(stream1));
-	// checkCUDA(cudaStreamSynchronize(stream2));
-	// checkCUDA(cudaStreamSynchronize(stream3));
-	// checkCUDA(cudaStreamSynchronize(stream4));
 	checkCUDA(cudaStreamSynchronize(stream5));
-	// checkCUDA(cudaStreamSynchronize(stream6));
-	// checkCUDA(cudaStreamSynchronize(stream7));
 
-	// Destroy streams when they are no longer needed
 	checkCUDA(cudaStreamDestroy(stream1));
 	checkCUDA(cudaStreamDestroy(stream2));
 	checkCUDA(cudaStreamDestroy(stream3));
@@ -764,12 +702,6 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 			// std::cout << "m_ptr->m_num_movable_atoms = " << m_ptr->m_num_movable_atoms << std::endl;
 			size_t m_size = sizeof(m_cl);
 
-			// printf("LCF-DEBUG the m_ptr-773: %d \n",m_ptr->atoms[1].types[3]);
-			// printf("LCF-DEBUG the two pre->m_cutoff_sqrr: %f \n",pre_ptr->m_cutoff_sqr);
-			// std::cout<<"LCF-DEBUG the m_ptr-773: \n"<<m_ptr->atoms[1].types[3]<<std::endl;
-			// std::cout<<"LCF-DEBUG the two pre->m_cutoff_sqrr:  \n"<<pre_ptr->m_cutoff_sqr<<std::endl;
-			// std::cout<<"completed the computing the grid ====> then for mento_computing"<<std::endl;
-
 			// Init ligand atom coords
 			result_coords_ptrs[ligand_count] = (ligand_atom_coords_cl *)malloc(par.mc.thread * sizeof(ligand_atom_coords_cl));
 			// memset(result_coords_ptrs[ligand_count], 0, sizeof(ligand_atom_coords_cl));
@@ -786,21 +718,6 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 
 			// checkCUDA(cudaMalloc((void **)&ric_gpus[ligand_count], ric_size));
 
-			// for (int i = 0; i < mis_ptr->thread; i++)
-			//{
-			//	checkCUDA(cudaMemcpy(ric_gpus[ligand_count] + i, ric_ptr, sizeof(output_type_cl), cudaMemcpyHostToDevice));
-			// }
-
-			// CreateDeviceBuffer(&ric_gpus[ligand_count], CL_MEM_READ_ONLY, ric_size, context);
-			// err = clEnqueueWriteBuffer(queue, ric_gpus[ligand_count], false, 0, ric_size, ric_ptr, 0, NULL, NULL); checkErr(err);
-
-			// m_cl* m_gpus[ligand_count];
-			// checkCUDA(cudaMalloc((void **)&m_gpus[ligand_count], m_size));
-			// checkCUDA(cudaMemcpy(m_gpus[ligand_count], m_ptr, m_size, cudaMemcpyHostToDevice));
-			// checkCUDA(cudaMemcpyAsync(m_gpus[ligand_count], m_ptr, m_size, cudaMemcpyHostToDevice, stream));
-			// std::cout << "the ric_gpus[ligand_count] memory size = " << ric_size << std::endl;
-			// std::cout << "the m_gpus[ligand_count] memory size =  " << mis_ptr->thread * m_size << std::endl;
-
 			checkCUDA(cudaMalloc((void **)&m_gpus[ligand_count], mis_ptr->thread * m_size));
 #pragma omp parallel for
 			for (int i = 0; i < mis_ptr->thread; i++)
@@ -808,28 +725,14 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 				checkCUDA(cudaMemcpy(m_gpus[ligand_count] + i, m_ptr, m_size, cudaMemcpyHostToDevice));
 			}
 
-			// cl_mem m_gpu;
-			// CreateDeviceBuffer(&m_gpus[ligand_count], CL_MEM_READ_WRITE, m_size, context);
-			// err = clEnqueueWriteBuffer(queue, m_gpus[ligand_count], false, 0, m_size, m_ptr, 0, NULL, NULL); checkErr(err);
-
 			// random_maps* random_maps_gpus[ligand_count];
 			checkCUDA(cudaMalloc((void **)&random_maps_gpus[ligand_count], rand_maps_size));
 			// checkCUDA(cudaMemcpy(random_maps_gpus[ligand_count], rand_maps_ptr, rand_maps_size, cudaMemcpyHostToDevice));
 			checkCUDA(cudaMemcpy(random_maps_gpus[ligand_count], rand_maps_ptr, rand_maps_size, cudaMemcpyHostToDevice));
 
-			// cl_mem random_maps_gpu;
-			// CreateDeviceBuffer(&random_maps_gpus[ligand_count], CL_MEM_READ_ONLY, rand_maps_size, context);
-			// err = clEnqueueWriteBuffer(queue, random_maps_gpus[ligand_count], false, 0, rand_maps_size, rand_maps_ptr, 0, NULL, NULL); checkErr(err);
-
-			// ligand_atom_coords_cl* result_coords_gpus[ligand_count];
-			//  cudamemcheck
 			checkCUDA(cudaMalloc((void **)&result_coords_gpus[ligand_count], mis_ptr->thread * sizeof(ligand_atom_coords_cl)));
 			// checkCUDA(cudaMemcpy(result_coords_gpus[ligand_count], result_coords_ptrs[ligand_count], mis_ptr->thread * sizeof(ligand_atom_coords_cl), cudaMemcpyHostToDevice));
 			checkCUDA(cudaMemcpy(result_coords_gpus[ligand_count], result_coords_ptrs[ligand_count], mis_ptr->thread * sizeof(ligand_atom_coords_cl), cudaMemcpyHostToDevice));
-			// cl_mem result_coords_gpu;
-			// CreateDeviceBuffer(&result_coords_gpus[ligand_count], CL_MEM_WRITE_ONLY, mis_ptr->thread * sizeof(ligand_atom_coords_cl), context);
-			// err = clEnqueueWriteBuffer(queue, result_coords_gpus[ligand_count], false, 0, mis_ptr->thread * sizeof(ligand_atom_coords_cl),
-			//	result_coords_ptrs[ligand_count], 0, NULL, NULL); checkErr(err);
 
 			// output_type_cl* result_gpus[ligand_count];
 			checkCUDA(cudaMalloc((void **)&result_gpus[ligand_count], par.mc.thread * sizeof(output_type_cl)));
@@ -841,39 +744,10 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 			/************************  Call to kernel function  ***********************/
 			/**************************************************************************/
 			// Call to kernel function
-			/*
-			printf("e: %f\n", ric_gpus[ligand_count]->e);
-			printf("position: (%f, %f, %f)\n", ric_gpus[ligand_count]->position[0], ric_gpus[ligand_count]->position[1], ric_gpus[ligand_count]->position[2]);
-			printf("orientation: (%f, %f, %f, %f)\n", ric_gpus[ligand_count]->orientation[0], ric_gpus[ligand_count]->orientation[1], ric_gpus[ligand_count]->orientation[2], ric_gpus[ligand_count]->orientation[3]);
-
-			std::cout << "pre_gpu_res: " << std::endl;
-			std::cout << "n: " << pre_gpu_res->n << std::endl;
-			std::cout << "m_cutoff_sqr: " << pre_gpu_res->m_cutoff_sqr << std::endl;
-			std::cout << "factor: " << pre_gpu_res->factor << std::endl;*/
-			// std::cout <<"mis->thread: "<<mis_ptr->thread<< "mis->total_wi: " <<mis_ptr->total_wi<<std::endl;
-			// std::cout << "<<Call to kernel_monte function>> " << std::endl;
-			// std::cout << "par.mc.search_depth[ligand_count] = " << par.mc.search_depth[ligand_count] << "  || par.mc.ssd_par.bfgs_steps[ligand_count] = " << par.mc.ssd_par.bfgs_steps[ligand_count] << std::endl;
-			// std::cout << "ric_size: " << sizeof(*ric_gpus[ligand_count]) * par.mc.thread << "\n"
-			//		  << "m_size: " << sizeof(*m_gpus[ligand_count]) << "\n"
-			//		  << "pre_size: " << sizeof(*pre_gpu) << "\n"
-			//		  << "grids_size: " << sizeof(*grids_gpu) << "\n"
-			//		  << "random_maps_size: " << sizeof(*random_maps_gpus[ligand_count]) << "\n"
-			//		  << "result_coords_size: " << sizeof(*result_coords_gpus[ligand_count]) * par.mc.thread << "\n"
-			//		  << "result_size: " << sizeof(*result_gpus[ligand_count]) * par.mc.thread << "\n"
-			//		  << "mis_size: " << sizeof(*mis_gpu) << "\n"
-			//		  << "torsion_size_size: " << sizeof(torsion_sizes[ligand_count]) << "\n"
-			//		  << "par_mc_search_depth_size: " << sizeof(par.mc.search_depth[ligand_count]) << "\n"
-			//		  << "par_mc_ssd_par_bfgs_steps_size: " << sizeof(par.mc.ssd_par.bfgs_steps[ligand_count]) << "\n"
-			//		  << "rilc_bfgs_size: " << sizeof(rilc_bfgs) << std::endl;
 
 			kernel_monte(ric_gpus[ligand_count], m_gpus[ligand_count], pre_gpu, grids_gpu, random_maps_gpus[ligand_count],
 						 result_coords_gpus[ligand_count], result_gpus[ligand_count], mis_gpu, torsion_sizes[ligand_count],
 						 par.mc.search_depth[ligand_count], par.mc.ssd_par.bfgs_steps[ligand_count], rilc_bfgs);
-
-			// err = clEnqueueNDRangeKernel(queue, kernels[1], 2, 0, kernel2_global_size, kernel2_local_size,
-			//	0, NULL, &ligands_events[ligand_count]); checkErr(err);
-
-			// clWaitForEvents(1, &ligands_events[ligand_count]);
 
 			// Init ligand atom coords
 			result_coords_ptrs[ligand_count] = (ligand_atom_coords_cl *)malloc(par.mc.thread * sizeof(ligand_atom_coords_cl));
@@ -886,14 +760,6 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 			checkCUDA(cudaMemcpy(result_ptrs[ligand_count], result_gpus[ligand_count], par.mc.thread * sizeof(output_type_cl), cudaMemcpyDeviceToHost));
 
 			checkCUDA(cudaMemcpy(result_coords_ptrs[ligand_count], result_coords_gpus[ligand_count], par.mc.thread * sizeof(ligand_atom_coords_cl), cudaMemcpyDeviceToHost));
-
-			// err = clEnqueueReadBuffer(queue, result_gpus[ligand_count], false, 0, par.mc.thread * sizeof(output_type_cl),
-			//	result_ptrs[ligand_count], 0, NULL, NULL); checkErr(err);
-
-			// err = clEnqueueReadBuffer(queue, result_coords_gpus[ligand_count], false, 0, par.mc.thread * sizeof(ligand_atom_coords_cl),
-			//	result_coords_ptrs[ligand_count], 0, NULL, NULL); checkErr(err);
-
-			// clFinish(queue);
 
 			std::vector<output_type> result_vina = cl_to_vina(result_ptrs[ligand_count], result_coords_ptrs[ligand_count],
 															  par.mc.thread, torsion_sizes[ligand_count]);
@@ -928,16 +794,6 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 			checkCUDA(cudaFree(ric_gpus[ligand_count]));
 			checkCUDA(cudaFree(m_gpus[ligand_count]));
 			checkCUDA(cudaFree(random_maps_gpus[ligand_count]));
-
-			// err = clReleaseMemObject(result_coords_gpus[ligand_count]); checkErr(err);
-			// err = clReleaseMemObject(result_gpus[ligand_count]);		checkErr(err);
-			// err = clReleaseMemObject(ric_gpus[ligand_count]);			checkErr(err);
-			// err = clReleaseMemObject(m_gpus[ligand_count]);				checkErr(err);
-			// err = clReleaseMemObject(random_maps_gpus[ligand_count]);	checkErr(err);
-
-			// #ifndef TIME_ANALYSIS
-			//		err = clReleaseEvent(ligands_events[ligand_count]);			checkErr(err);
-			// #endif // !TIME_ANALYSIS
 		}
 		catch (...)
 		{
@@ -952,10 +808,6 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 	// free(mis_gpu_res);
 	// free(grids_gpu_res);
 	// free(pre_gpu_res);
-
-	// err = clReleaseMemObject(mis_gpu);		checkErr(err);
-	// err = clReleaseMemObject(grids_gpu);	checkErr(err);
-	// err = clReleaseMemObject(pre_gpu);		checkErr(err);
 
 	status = FINISH;
 #ifdef NDEBUG
@@ -994,15 +846,3 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 	printf("\n");
 #endif
 }
-/*
-#ifdef OPENCL_TIME_ANALYSIS
-		cout << setiosflags(ios::fixed);
-		std::ofstream file("gpu_runtime.log");
-		if (file.is_open())
-		{
-			file << "GPU grid cache runtime = " << (kernel1_total_time / 1000000000.0) << " s" << std::endl;
-			file << "GPU monte carlo runtime = " << (kernel2_total_time / 1000000000.0) << " s" << std::endl;
-			file.close();
-		}
-#endif
-}*/

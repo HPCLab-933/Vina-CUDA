@@ -311,15 +311,6 @@ void do_search(model &m, const boost::optional<model> &ref, const scoring_functi
 		}
 	}
 }
-// lcf-debug
-/*
-void main_procedure(std::vector<model>& ms, const boost::optional<model>& ref, // m is non-const (FIXME?)
-	const std::vector<std::string>& out_names,
-	bool score_only, bool local_only, bool randomize_only, bool no_cache,
-	const grid_dims& gd, int exhaustiveness,
-	const flv& weights,
-	int cpu, int seed, int verbosity, sz num_modes, fl energy_range,
-	tee& log, int search_depth, int thread, std::string opencl_binary_path, std::vector<std::vector<std::string>> ligand_names, int rilc_bfgs)*/
 
 void main_procedure(std::vector<model> &ms, const boost::optional<model> &ref, // m is non-const (FIXME?)
 					const std::vector<std::string> &out_names,
@@ -406,7 +397,6 @@ void main_procedure(std::vector<model> &ms, const boost::optional<model> &ref, /
 	done(verbosity, log);
 
 	std::vector<output_container> out_conts(ligand_num);
-	// main_procedure_cl(c, ms, prec, par, corner1, corner2, seed, out_conts, opencl_binary_path, ligand_names, rilc_bfgs); //lcf-debug
 
 	main_procedure_cl(c, ms, prec, par, corner1, corner2, seed, out_conts, ligand_names, rilc_bfgs);
 
@@ -623,23 +613,22 @@ int main(int argc, char *argv[])
 		int cpu = 1, seed, exhaustiveness = 1, verbosity = 2, num_modes = 9;
 		fl energy_range = 2.0;
 		int search_depth = 0;
-		int thread = 1000; // lcf-debug 8000 ==1000
-		// std::string ligand_directory, output_directory, opencl_binary_path; //lcf-debug
+		int thread = 8000; //
+		// std::string ligand_directory, output_directory, opencl_binary_path;
 		std::string ligand_directory, output_directory;
-		// opencl_binary_path = "."; //lcf-debug
+		// opencl_binary_path = ".";
 		int rilc_bfgs = 1;
 
 		/*
-		// lcf-debug change the valus of empirical parameters based on [Improving ligand-ranking of AutoDock Vina by changing the empirical parameters:https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26779?saml_referrer]
+		// change the valus of empirical parameters based on [Improving ligand-ranking of AutoDock Vina by changing the empirical parameters:https://onlinelibrary.wiley.com/doi/full/10.1002/jcc.26779?saml_referrer]
 		fl weight_gauss1 = -0.049811;
 		fl weight_gauss2 = -0.007218;
 		fl weight_repulsion = 0.756221;
 		fl weight_hydrophobic = -0.031562;
 		fl weight_hydrogen = -0.469951;
 		fl weight_rot = 0.025772;
-		// end lcf-debug */
+		 */
 
-		// -0.035579, -0.005156, 0.840245, -0.035069, -0.587439, 0.05846
 		fl weight_gauss1 = -0.035579;
 		fl weight_gauss2 = -0.005156;
 		fl weight_repulsion = 0.840245;
@@ -653,7 +642,7 @@ int main(int argc, char *argv[])
 
 		options_description inputs("Input");
 		inputs.add_options()("receptor", value<std::string>(&rigid_name), "rigid part of the receptor (PDBQT)")("flex", value<std::string>(&flex_name), "flexible side chains, if any (PDBQT)")("ligand", value<std::string>(&ligand_name), "ligand (PDBQT)")("ligand_directory", value<std::string>(&ligand_directory), "ligand directory, if virtual screening is needed")("output_directory", value<std::string>(&output_directory), "output directory, if virtual screening is needed")("thread", value<int>(&thread), "the number of computing lanes in Vina-GPU")("search_depth", value<int>(&search_depth), "the number of search depth in monte carlo")
-			//("opencl_binary_path", value<std::string>(&opencl_binary_path)->default_value(opencl_binary_path), "opencl precompiled binary file path")  //lcf-debug
+			//("opencl_binary_path", value<std::string>(&opencl_binary_path)->default_value(opencl_binary_path), "opencl precompiled binary file path")
 			("rilc_bfgs", value<int>(&rilc_bfgs)->default_value(rilc_bfgs), "rilc_bfgs enable or not");
 		// options_description search_area("Search area (required, except with --score_only)");
 		options_description search_area("Search space (required)");
@@ -808,7 +797,7 @@ int main(int argc, char *argv[])
 				throw usage_error("Search space dimensions should be positive");
 		}
 
-		// log << cite_message << '\n'; // lcf-debug
+		// log << cite_message << '\n';
 
 		if (search_box_needed && size_x * size_y * size_z > 27e3)
 		{

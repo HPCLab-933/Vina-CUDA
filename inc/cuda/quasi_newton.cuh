@@ -203,10 +203,10 @@ __device__ flo g_evaluate_update(   grid_cl*	g,  // delete the __constant
 	int m_j = grids_cuda->m_j;
 	int m_k = grids_cuda->m_k;
 	if(m_i * m_j * m_k == 0)printf("\nkernel2: g_evaluate ERROR!#1");
-	//flo tmp_vec[3] = { m_coords[0] - g->m_init[0],m_coords[1] - g->m_init[1] ,m_coords[2] - g->m_init[2] };
-	//flo tmp_vec2[3] = { g->m_factor[0],g->m_factor[1] ,g->m_factor[2] };
+	
 	flo s[3];
 	//elementwise_product(s, tmp_vec, tmp_vec2); // 
+
 	s[0] = (m_coords[0] - grids_cuda->m_init[0]) *  grids_cuda->m_factor[0];
 	s[1] = (m_coords[1] - grids_cuda->m_init[1]) *  grids_cuda->m_factor[1];
 	s[2] = (m_coords[2] - grids_cuda->m_init[2]) *  grids_cuda->m_factor[2];
@@ -369,74 +369,6 @@ __device__ void warpRecude(volatile float* s_y, int tid){
     s_y[tid] += s_y[tid + 2];
     s_y[tid] += s_y[tid + 1];
 }
-/*
-__device__ flo ig_eval_deriv_update(		output_type_cl*		x,
-											change_cl*			g, 
-						const				flo				v,
-											grids_cl*			grids,  // delete the constant
-											m_cl*				m,
-						const				flo				epsilon_fl,
-											m_coords_cl*	m_coords,
-											m_minus_forces* minus_forces,
-						const				int				threadNumInBlock,
-						const				int				threadsPerBlock
-) {
-
-	int nat = num_atom_types(grids->atu);
-	__shared__ float e[MAX_NUM_OF_ATOMS];
-	//e[MAX_NUM_OF_ATOMS] = {0};
-	for (int i = threadNumInBlock;i < MAX_NUM_OF_ATOMS; i = i + threadsPerBlock) e[i] = 0;
-
-	for (int i = threadNumInBlock;
-		i < m->m_num_movable_atoms;
-		i = i + threadsPerBlock
-	){
-		if (i < m->m_num_movable_atoms) {
-			int t = m->atoms[i].types[grids->atu];
-			if (t >= nat) {
-				//for (int j = 0; j < 3; j++)
-					minus_forces->coords[i][0] = 0;
-					minus_forces->coords[i][1] = 0;
-					minus_forces->coords[i][2] = 0;
-			} else {
-				float deriv[3];
-				e[i] = g_evaluate_update(&grids->grids[t], m_coords->coords[i], grids->slope, v, deriv, epsilon_fl);
-				//for (int j = 0; j < 3; j++)
-					minus_forces->coords[i][0] = deriv[0];
-					minus_forces->coords[i][1] = deriv[1];
-					minus_forces->coords[i][2] = deriv[2];
-			}
-		}
-	} __syncthreads();
-	//Sum intermolecular energy
-	if (MAX_NUM_OF_ATOMS > threadsPerBlock) {
-		int tmp = MAX_NUM_OF_ATOMS / threadsPerBlock;
-		for (int i = 1; i < tmp; i++) {
-			e[threadNumInBlock] += e[threadNumInBlock + threadsPerBlock * i];
-		}
-		if (threadNumInBlock < (MAX_NUM_OF_ATOMS % threadsPerBlock)) {
-			e[threadNumInBlock] += e[threadNumInBlock + tmp * threadsPerBlock];
-		}
-		__syncthreads();
-		warpRecude(e, threadNumInBlock);
-		if(threadNumInBlock == 0)
-		{
-			return e[0];
-		}
-	
-	}
-	else {
-		warpRecude(e, threadNumInBlock);
-		
-		if(threadNumInBlock == 0)
-		{
-				return e[0];
-		}
-	}
-
-}
-//________________________________________________________________________________________________________________________________________________________________________
-*/
 __device__ flo ig_eval_deriv_update_optimal(		output_type_cl*		x,
 											change_cl*			g, 
 						const				flo				v,
@@ -454,8 +386,6 @@ __device__ flo ig_eval_deriv_update_optimal(		output_type_cl*		x,
 
 	 __shared__ float e[MAX_NUM_OF_ATOMS];
 	float deriv[3] = {0};
-	//deriv[0] = 0;deriv[1] = 0;deriv[2] = 0;
-
 
 	for (int i = threadNumInBlock;i < MAX_NUM_OF_ATOMS;i = i + threadsPerBlock) e[i] = 0;
 	
@@ -472,9 +402,7 @@ __device__ flo ig_eval_deriv_update_optimal(		output_type_cl*		x,
 				minus_forces->coords[i][2] = 0;
 			} else {
 				
-				//e[i] = g_evaluate_update(&grids->grids[t], m_coords->coords[i], grids->slope, v, deriv, epsilon_fl);
 				e[i] = g_evaluate_update(&grids->grids[t], m_coords->coords[i], grids->slope, v, deriv, epsilon_fl,&grids_cuda->grid_other[t]);
-				//e[i] = g_evaluate(&grids->grids[t], m_coords->coords[i], grids->slope, v, deriv, epsilon_fl); 
 
 				//for (int j = 0; j < 3; j++)
 				minus_forces->coords[i][0] = deriv[0];
@@ -509,7 +437,7 @@ __device__ flo ig_eval_deriv_update_optimal(		output_type_cl*		x,
 	}
 		
 }
-//________________________________________________________________________________________________________________________________________________________________________________________
+
 
 __device__ inline void quaternion_to_r3(const flo* q, flo* orientation_m) {
 	// Omit assert(quaternion_is_normalized(q));
@@ -562,12 +490,12 @@ __device__ inline void local_to_lab_direction(			flo* out,
 				orientation_m[5] * local_direction[1] +
 				orientation_m[8] * local_direction[2];*/
 
-	// 使用寄存器存储局部变量，减少全局内存访问
+
     flo ld0 = local_direction[0];
     flo ld1 = local_direction[1];
     flo ld2 = local_direction[2];
 
-    // 预计算一些中间变量
+
     flo om0_ld0 = orientation_m[0] * ld0;
     flo om1_ld0 = orientation_m[1] * ld0;
     flo om2_ld0 = orientation_m[2] * ld0;
@@ -580,7 +508,7 @@ __device__ inline void local_to_lab_direction(			flo* out,
     flo om7_ld2 = orientation_m[7] * ld2;
     flo om8_ld2 = orientation_m[8] * ld2;
 
-    // 计算输出
+
     out[0] = om0_ld0 + om3_ld1 + om6_ld2;
     out[1] = om1_ld0 + om4_ld1 + om7_ld2;
     out[2] = om2_ld0 + om5_ld1 + om8_ld2;
@@ -634,7 +562,7 @@ __device__ void set(	const				output_type_cl* x,
 			const				int				m_num_movable_atoms,
 			const				flo			epsilon_fl
 ) {
-	//************** (root --> origin[0]) node.set_conf **************// (CHECKED)
+	//************** (root --> origin[0]) node.set_conf **************// 
 	for (int i = 0; i < 3; i++) lig_rigid_gpu->origin[0][i] = x->position[i]; // set origin
 	for (int i = 0; i < 4; i++) lig_rigid_gpu->orientation_q[0][i] = x->orientation[i]; // set orientation_q
 	quaternion_to_r3(lig_rigid_gpu->orientation_q[0], lig_rigid_gpu->orientation_m[0]);// set orientation_m
@@ -650,13 +578,13 @@ __device__ void set(	const				output_type_cl* x,
 	//update nodes in depth-first order
 	for (int current = 1; current < lig_rigid_gpu->num_children + 1; current++) { // current starts from 1 (namely starts from first child node)
 		int parent = lig_rigid_gpu->parent[current];
-		flo torsion = x->lig_torsion[current - 1]; // torsions are all related to child nodes
-		local_to_lab(	lig_rigid_gpu->origin[current], // #######need with the share memory
+		flo torsion = x->lig_torsion[current - 1]; 
+		local_to_lab(	lig_rigid_gpu->origin[current], 
 						lig_rigid_gpu->origin[parent],
 						lig_rigid_gpu->relative_origin[current],
 						lig_rigid_gpu->orientation_m[parent]
 						); // set origin
-		local_to_lab_direction(	lig_rigid_gpu->axis[current], // #######need with the share memory
+		local_to_lab_direction(	lig_rigid_gpu->axis[current], 
 								lig_rigid_gpu->relative_axis[current],
 								lig_rigid_gpu->orientation_m[parent]
 								); // set axis
@@ -710,7 +638,7 @@ __device__ void set_update(	const				output_type_cl* x,
 	int begin = lig_rigid_gpu->atom_range[0][0];
 	int end =	lig_rigid_gpu->atom_range[0][1];
 	for (int i = begin; i < end; i++) {
-		local_to_lab(m_coords_gpu->coords[i], lig_rigid_gpu->origin[0], &atoms[i].coords[0], lig_rigid_gpu->orientation_m[0]);  // ############lcf-debug &atoms[i].coords[0] -> atoms[i].coords#########
+		local_to_lab(m_coords_gpu->coords[i], lig_rigid_gpu->origin[0], &atoms[i].coords[0], lig_rigid_gpu->orientation_m[0]); 
 	}
 	//************** end node.set_conf **************//
 
@@ -719,12 +647,12 @@ __device__ void set_update(	const				output_type_cl* x,
 	for (int current = 1; current < lig_rigid_gpu->num_children + 1; current++) { // current starts from 1 (namely starts from first child node)
 		int parent = lig_rigid_gpu->parent[current];
 		flo torsion = x->lig_torsion[current - 1]; // torsions are all related to child nodes
-		local_to_lab(	lig_rigid_gpu->origin[current], // #######need with the share memory
+		local_to_lab(	lig_rigid_gpu->origin[current], 
 						lig_rigid_gpu->origin[parent],
 						lig_rigid_gpu->relative_origin[current],
 						lig_rigid_gpu->orientation_m[parent]
 						); // set origin
-		local_to_lab_direction(	lig_rigid_gpu->axis[current], // #######need with the share memory
+		local_to_lab_direction(	lig_rigid_gpu->axis[current], 
 								lig_rigid_gpu->relative_axis[current],
 								lig_rigid_gpu->orientation_m[parent]
 								); // set axis
@@ -772,7 +700,7 @@ __device__ void set_update_optimal(	const				output_type_cl* x,
 	int begin = lig_rigid_gpu->atom_range[0][0];
 	int end =	lig_rigid_gpu->atom_range[0][1];
 	for (int i = begin; i < end; i++) {
-		local_to_lab(m_coords_gpu->coords[i], lig_rigid_gpu->origin[0], atoms[i].coords, lig_rigid_gpu->orientation_m[0]);  // ############lcf-debug &atoms[i].coords[0] -> atoms[i].coords#########
+		local_to_lab(m_coords_gpu->coords[i], lig_rigid_gpu->origin[0], atoms[i].coords, lig_rigid_gpu->orientation_m[0]);  
 	}
 	//************** end node.set_conf **************//
 
@@ -781,12 +709,12 @@ __device__ void set_update_optimal(	const				output_type_cl* x,
 	for (int current = 0; current < lig_rigid_gpu->num_children + 1; current ++) { // current starts from 1 (namely starts from first child node)
 		int parent = lig_rigid_gpu->parent[current];
 		flo torsion = x->lig_torsion[current - 1]; // torsions are all related to child nodes
-		local_to_lab(	lig_rigid_gpu->origin[current], // #######need with the share memory
+		local_to_lab(	lig_rigid_gpu->origin[current], // 
 						lig_rigid_gpu->origin[parent],
 						lig_rigid_gpu->relative_origin[current],
 						lig_rigid_gpu->orientation_m[parent]
 						); // set origin
-		local_to_lab_direction(	lig_rigid_gpu->axis[current], // #######need with the share memory
+		local_to_lab_direction(	lig_rigid_gpu->axis[current], 
 								lig_rigid_gpu->relative_axis[current],
 								lig_rigid_gpu->orientation_m[parent]
 								); // set axis
@@ -965,7 +893,7 @@ __device__ flo eval_interacting_pairs_deriv_update(  pre_cl*			 pre,  // delete 
 	}
 
 }
-//_______________________________________________________________________________________________________________________________________________________
+
 __device__ flo eval_interacting_pairs_deriv_update_optimal(  pre_cl*			 pre,  // delete the constant
 									const				flo			v,
 									const				lig_pairs_cl*    pairs,
@@ -1037,14 +965,8 @@ __device__ flo eval_interacting_pairs_deriv_update_optimal(  pre_cl*			 pre,  //
 	}
 
 }
-//________________________________________________________________________________________________________________________________________________
 
 __device__ inline void product(flo* res, const flo*a,const flo*b) {
-	//res[0] = a[1] * b[2] - a[2] * b[1];
-	//res[1] = a[2] * b[0] - a[0] * b[2];
-	//res[2] = a[0] * b[1] - a[1] * b[0];
-
-	// 使用寄存器存储中间结果
     flo a0 = a[0];
     flo a1 = a[1];
     flo a2 = a[2];
@@ -1248,12 +1170,12 @@ __device__ flo m_eval_deriv(			output_type_cl*		c,
 
 	return e;
 }
-//______________________________________________________________________________________________________________________________________________________
+
 __device__ flo m_eval_deriv_update(		output_type_cl*		c,
 										change_cl*			g,
 										m_cl*				m,
 										pre_cl*				pre,  //delete the constant 
-										grids_cl*		grids, //delete the constant 
+										grids_cl*		grids,    //delete the constant 
 					const				flo*				v,     // delete the __global
 					const				flo					epsilon_fl,
 										m_coords_cl*		m_coords,
@@ -1264,10 +1186,6 @@ __device__ flo m_eval_deriv_update(		output_type_cl*		c,
 									grids_gpu*          grids_cuda
 
 ) {
-	//__shared__ rigid_cl rigid_shared;
-	//rigid_shared = m->ligand.rigid;
-	//set_update_optimal(c, &rigid_shared, m_coords, m->atoms, m->m_num_movable_atoms, epsilon_fl,threadNumInBlock,threadsPerBlock);
-	//m->ligand.rigid = rigid_shared;
 
 	set_update(c, m_gpu_rigid, m_coords, m->atoms, m->m_num_movable_atoms, epsilon_fl);
 
@@ -1428,7 +1346,6 @@ __device__ inline flo scalar_product_update(	const	change_cl*	a,
 		if (threadNumInBlock < ( n % threadsPerBlock)) {
 			tmp[threadNumInBlock] += tmp[threadNumInBlock + tmp_1 * threadsPerBlock];
 		}
-		//printf("run this here 176!!!!!");
 		__syncthreads();
 	}
 	
@@ -1462,7 +1379,7 @@ __device__ inline void get_to_minus(change_cl* a, change_cl* b, const int n)
 
 __device__ inline void get_to_minus_update(change_cl* a, change_cl* b, const int threadNumInBlock, const int threadsPerBlock)
 {
-	//for (int i = 0; i < 3; i++){
+	
 		a->position[0] = -b->position[0];
 		a->position[1] = -b->position[1];
 		a->position[2] = -b->position[2];
@@ -1470,15 +1387,14 @@ __device__ inline void get_to_minus_update(change_cl* a, change_cl* b, const int
 		a->orientation[0] = -b->orientation[0];
 		a->orientation[1] = -b->orientation[1];
 		a->orientation[2] = -b->orientation[2];
-	//}
-	//for (int i = threadNumInBlock; i < 3; i= i + threadsPerBlock)a->orientation[i] = -b->orientation[i];
+	
 	for (int i = 0; i < MAX_NUM_OF_LIG_TORSION; i += 2) {
 		a->lig_torsion[i] = -b->lig_torsion[i];
 		a->lig_torsion[i+1] = -b->lig_torsion[i+1];
 		a->flex_torsion[i] = -b->flex_torsion[i];
 		a->lig_torsion[i+1] = -b->lig_torsion[i+1];
 	}
-	//for (int i = threadNumInBlock; i < MAX_NUM_OF_FLEX_TORSION; i = i + threadsPerBlock) a->flex_torsion[i] = -b->flex_torsion[i];
+	
 }
 __device__ inline flo to_norm(const change_cl* in, const int n, const int torsion_size)
 {
@@ -1817,7 +1733,7 @@ __device__ void rilc_bfgs(				output_type_cl* 	x,
 						mis->hunt_cap,
 						mis->epsilon_fl
 	);
-	// printf("/AutoDock-Vina-GPU-2.1/OpenCL/src/kernels/quasi_newton.clthe 819: fx : %f\n",fx);
+
 	flo fxp = fx;
 	flo fx_orig = fx;
 	change_cl g_orig = *g;
@@ -1920,7 +1836,7 @@ __device__ void rilc_bfgs(				output_type_cl* 	x,
 				lm_alpha = lm_s_dot_d / lm_ys;
 				for (int b = 0; b < n; b++)
 				{
-					//flo mimus_lm_alpha_mulit_lm_y = (-lm_alpha * lm_y[b]); //lcf-debug
+					//flo mimus_lm_alpha_mulit_lm_y = (-lm_alpha * lm_y[b]); 
 					find_change_index_write(&d, b, find_change_index_read(&d, b, torsion_size) + lm_alpha * lm_y[b], torsion_size);
 					// d *= ys / yy;
 					find_change_index_write(&d, b, find_change_index_read(&d, b, torsion_size) * (ys / yy), torsion_size);
@@ -1998,8 +1914,6 @@ __device__ void rilc_bfgs_update(			output_type_cl* 	x,
 
 	flo lm_s[MAX_HESSIAN_MATRIX_SIZE] = {0}; 
 	flo lm_y[MAX_HESSIAN_MATRIX_SIZE] = {0}; 
-	//for(int i = threadNumInBlock; i<MAX_HESSIAN_MATRIX_SIZE; i = i+threadsPerBlock) lm_s[i] = 0.0 ;
-	//for(int i = threadNumInBlock; i<MAX_HESSIAN_MATRIX_SIZE; i = i+threadsPerBlock) lm_y[i] = 0.0 ;
 
 	flo lm_ys = 0;
 	fx = m_eval_deriv_update(x,
@@ -2105,10 +2019,6 @@ __device__ void rilc_bfgs_update(			output_type_cl* 	x,
 			yy += lm_y[i] * lm_y[i];
 		}
 
-		// lcf-debug:2024-04-18
-		//for (int i = 0; i < n; i++) {
-		//	yy += lm_y[i] * lm_y[i];
-		//}
 
 		lm_ys = ys;
 
@@ -2123,11 +2033,6 @@ __device__ void rilc_bfgs_update(			output_type_cl* 	x,
 			cau_t = cau_t + (find_change_index_read_update(&gp, i, torsion_size) * find_change_index_read_update(&gp, i, torsion_size));
 		}
 		
-		// lcf-debug
-		//for (int i = 0; i < n; i++)
-		//{
-		//	cau_t = cau_t + (find_change_index_read_update(&gp, i, torsion_size) * find_change_index_read_update(&gp, i, torsion_size));
-		//}
 		
 		cau = cau * sqrt(cau_t);
 		// CAUTIOUS_FACTOR
@@ -2146,7 +2051,7 @@ __device__ void rilc_bfgs_update(			output_type_cl* 	x,
 			
 			for (int b = 0; b < n; b ++)
 			{
-			  //flo mimus_lm_alpha_mulit_lm_y = (-lm_alpha * lm_y[b]); //lcf-debug
+			  //flo mimus_lm_alpha_mulit_lm_y = (-lm_alpha * lm_y[b]); 
 				find_change_index_write_update(&d, b, find_change_index_read_update(&d, b, torsion_size) + lm_alpha * lm_y[b], torsion_size);
 			}
 

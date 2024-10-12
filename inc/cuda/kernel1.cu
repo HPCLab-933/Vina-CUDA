@@ -47,8 +47,6 @@ __device__ inline int triangular_matrix_index_permissive(int n, int i, int j)
 	return (i <= j) ? triangular_matrix_index(n, i, j) : triangular_matrix_index(n, j, i);
 }
 
-// 使用 CUDA 中的__constant__ 替换 OPENCL中的__global
-// const __global  pre_cl* pre  ---> const  pre_cl* pre
 
 __device__ inline flo eval_fast(int type_pair_index, flo r2, flo cutoff_sqr, const pre_cl *pre)
 {
@@ -72,7 +70,6 @@ __device__ inline const int *possibilities(flo *coords,
 )
 {
 	int index[3];
-	// flo temp_array[3];  //lcf-debug
 	int m_data_dims[3] = {mis->ar_mi, mis->ar_mj, mis->ar_mk};
 	for (int i = 0; i < 3; i++)
 	{
@@ -81,17 +78,16 @@ __device__ inline const int *possibilities(flo *coords,
 		if (coords[i] > gb->init[i] + gb->range[i] + epsilon_fl)
 			printf("\nkernel1:possibilities ERROR!2 coords = %f,  init = %f, range =%f", coords[i], gb->init[i], gb->range[i]); // replace assert()
 		const flo tmp = (coords[i] - gb->init[i]) * m_data_dims[i] / gb->range[i];
-		// temp_array[i] = tmp;  //lcf-debug
 		index[i] = fl_to_sz(tmp, m_data_dims[i] - 1);
 	}
 	int temp = index[0] + m_data_dims[0] * (index[1] + m_data_dims[1] * index[2]);
 	const int *address;
-	address = (int *)&(ar->relation[temp]); // lcf-debug
+	address = (int *)&(ar->relation[temp]);
 	*relation_count = ar->relation_size[temp];
 	return address;
 }
 
-// atu :atom_typing_used   nat : num_atom_types
+//atu :atom_typing_used   nat : num_atom_types
 __global__ void kernel1(
 	const pre_cl *pre, // delete the __global
 	const pa_cl *pa,   // delete the __global
@@ -103,16 +99,12 @@ __global__ void kernel1(
 	const int atu,
 	const int nat)
 {
-	// int x = get_global_id(0);
-	// int y = get_global_id(1);
-	// int z = get_global_id(2);
 
 	int x = blockIdx.x * blockDim.x + threadIdx.x;
 	int y = blockIdx.y * blockDim.y + threadIdx.y;
 	int z = blockIdx.z * blockDim.z + threadIdx.z;
 	int grids_front = mis->grids_front;
 
-	// printf("here!");
 	if (x >= grids->grids[grids_front].m_i)
 	{
 		// printf(" <<< x >=grids->grids[grids_front].m_i >>> the x = %f, grids->grids[grids_front].m_i = %f",x,grids->grids[grids_front].m_i);
@@ -165,10 +157,6 @@ __global__ void kernel1(
 		}
 	}
 
-	// for( int i = 0 ; i < 17; i++){
-	//	printf("the affinitie is : %f",affinities[i]);
-	// }
-
 	for (int j = 0; j < mis->needed_size; j++)
 	{
 		int t = needed[j];
@@ -202,10 +190,7 @@ __global__ void kernel1(
 		if (x * y * z != 0)
 			grids->grids[t].m_data[addr_7 * 8 + 7] = affinities[j];
 	}
-	// for(int i = 0; i < 17; i++){
-	//	for(int j = 0; j < 100;j++)
-	//	 printf("grids->grids[i].m_data[j] = %f ", grids->grids[i].m_data[j]);
-	// }
+
 }
 
 extern "C" void kernel_grid(
@@ -219,11 +204,6 @@ extern "C" void kernel_grid(
 	const int atu,
 	const int nat)
 {
-
-	/*
-	cl_event kernel1;
-	size_t kernel1_global_size[3] = { 128, 128, 128 };
-	size_t kernel1_local_size[3] = { 4,4,4 };*/
 
 	dim3 grid_sz(128, 128, 128);
 	dim3 block_sz(4, 4, 4);
@@ -250,7 +230,7 @@ extern "C" void kernel_grid(
 	cudaEventSynchronize(time2);
 
 	cudaEventElapsedTime(&kernalExecutionTime, time1, time2);
-	// printf("\nLCF-debug-the-program");
+	
 	//printf("\nElapsed time for kernel_grid-GPU calculation: %0.6f s \n", kernalExecutionTime / 1000);
 
 	cudaEventDestroy(time1);

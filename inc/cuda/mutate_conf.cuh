@@ -54,7 +54,6 @@ __device__ inline void normalize_angle(flo* x) {
 }
 
 __device__ inline void normalize_angle_update(float* x) {
-    // 使用模运算将角度归一化到 [-PI, PI] 范围内
     *x = fmodf(*x + M_PI, 2 * M_PI) - M_PI;
 }
 
@@ -106,7 +105,7 @@ __device__ inline void angle_to_quaternion_multi(flo* qa, const flo* qb) {
 	qa[3] = tmp[0] * qb[3] + tmp[1] * qb[2] - tmp[2] * qb[1] + tmp[3] * qb[0];
 }
 
-//通过使用寄存器减少内存访问的次数和时间 //lcf-update
+
 __device__ inline void angle_to_quaternion_multi_update(flo* qa, const flo* qb) {
     flo a0 = qa[0], a1 = qa[1], a2 = qa[2], a3 = qa[3];
 
@@ -121,7 +120,6 @@ __device__ inline void angle_to_quaternion_multi_update(flo* qa, const flo* qb) 
 __device__ inline void quaternion_normalize_approx(flo* q, flo epsilon_fl) {
 	const flo s = powf(q[0], 2) + powf(q[1], 2) + powf(q[2], 2) + powf(q[3], 2);
 	// Omit one assert()
-	//lcf-update
 	if (fabs(s - 1) >= TOLERANCE){
 		const flo a = sqrt(s);
 		if (a <= epsilon_fl) printf("\nmutate: quaternion_normalize_approx ERROR!"); // Replace assert(a > epsilon_fl);
@@ -174,7 +172,6 @@ __device__  flo gyration_radius(				int				m_lig_begin,
 	return (counter > 0) ? sqrt(acc / counter) : 0;
 }
 
-//########################################################################################################
 __device__  flo gyration_radius_update(				int				m_lig_begin,
 									int				m_lig_end,
 								atom_cl*			atoms,
@@ -274,7 +271,7 @@ __device__ void mutate_conf_cl(const		int				step,
 
 	int index = step; // global index (among all threads)
 	int which = random_int_map[index];
-	int flex_torsion_size = 0; // FIX? 20210727
+	int flex_torsion_size = 0;  
 		if (which == 0) {
 			for (int i = 0; i < 3; i++)
 				c->position[i] += amplitude * random_inside_sphere_map[index][i];
@@ -319,7 +316,7 @@ __device__ void mutate_conf_cl_update(const		int				step,
 
 		int index = step; // global index (among all threads)
 		int which = random_int_map[index];
-		int flex_torsion_size = 0; // FIX? 20210727
+		int flex_torsion_size = 0;  
 		if (which == 0) {
 			for (int i = threadNumInBlock; i < 3; i += threadsPerBlock)
 				c->position[i] += amplitude * random_inside_sphere_map[index][i];
