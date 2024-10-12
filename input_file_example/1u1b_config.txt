@@ -7,7 +7,6 @@ size_y = 26.25
 size_z = 22.5
 
 receptor =./input_file_example/1u1b_protein.pdbqt
-ligand = ./input_file_example/docking_ligand_50/BACE_1_ligand.pdbqt
+ligand = ./input_file_example/1u1b_ligand.pdbqt
 
-search_depth = 50
-thread = 16384
+thread = 8192

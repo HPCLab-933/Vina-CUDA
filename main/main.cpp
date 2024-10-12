@@ -1004,11 +1004,11 @@ int main(int argc, char *argv[])
 	std::ofstream file("gpu_runtime.log", std::ios::app);
 	if (file.is_open())
 	{
-		file << "AutoDockVina-GPU3 total runtime = " << (double)(end - start) / CLOCKS_PER_SEC << " s" << std::endl;
+		file << "Vina-GPU-2-1-CUDA total runtime = " << (double)(end - start) / CLOCKS_PER_SEC << " s" << std::endl;
 		file.close();
 	}
 #endif
 
-	std::cout << "AutoDockVina-GPU3 total runtime = " << (double)(end - start) / CLOCKS_PER_SEC << " s" << std::endl;
+	std::cout << "Vina-GPU-2-1-CUDA total runtime = " << (double)(end - start) / CLOCKS_PER_SEC << " s" << std::endl;
 	// getchar();
 }

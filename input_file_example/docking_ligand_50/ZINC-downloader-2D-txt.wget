@@ -1,1 +1,0 @@
-mkdir -pv AA && wget http://files.docking.org/2D/AA/AAAA.txt -O AA/AAAA.txt

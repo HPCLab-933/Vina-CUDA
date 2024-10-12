@@ -145,7 +145,7 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 	checkCUDA(cudaGetDeviceProperties(&props, device));
 	int max_wg_size = props.maxThreadsPerBlock;
 
-	// std::cout << "Device name: " << props.name << std::endl;
+	std::cout << "Device name: " << props.name << " || " << "Compute capability: " << props.major << "." << props.minor << std::endl;
 	// std::cout << "Compute capability: " << props.major << "." << props.minor << std::endl;
 	// std::cout << "The maxThreadsPerBlock is : " << max_wg_size << std::endl;
 
@@ -160,7 +160,7 @@ void main_procedure_cl(cache &c, const std::vector<model> &ms, const precalculat
 	/************************    Original Vina code    ************************/
 	/**************************************************************************/
 
-	// printf("\nUsing random seed: %d , Search depth is set to:%f \n", seed, par.mc.search_depth);
+	printf("\nUsing random seed: %d", seed);
 
 	sz nat = num_atom_types(c.atu);
 

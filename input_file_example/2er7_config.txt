@@ -9,4 +9,4 @@ size_z = 22.5
 receptor = ./input_file_example/2er7_protein.pdbqt
 ligand = ./input_file_example/2er7_ligand.pdbqt
 
-thread = 16384
+thread = 8192
