@@ -8,5 +8,6 @@ size_z = 22.5
 
 receptor =./input_file_example/1u1b_protein.pdbqt
 ligand = ./input_file_example/1u1b_ligand.pdbqt
+out = ./docking_result/1u1b_docking_result.pdbqt
 
 thread = 8192
