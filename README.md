@@ -1,2 +1,2 @@
 # Vina-CUDA
-Vina-CUDA: further accelerating Autodock Vina with in-depth utilization of GPU hardware characteristics
+In this project, we propose Vina-CUDA based on Vina-GPU 2.1, which aims to further enhance Vina-GPU 2.1's docking speed by optimizing its core algorithms through deep utilization of GPU hardware features, thereby reducing the cost of virtual screening and increasing the efficiency of drug design.
