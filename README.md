@@ -18,3 +18,14 @@ In this project, we propose **Vina-CUDA** based on [Vina-GPU 2.1](https://github
        2. $BOOST_LIB_PATH : Set to the path where the BOOST library is located (eg: path/of/BOOST/boost_1_77_0);
        3. $NVCC_COMPILER : Set to the path of the NVCC compiler (eg: /usr/local/cuda-12.2/bin/nvcc).
  4. Save the Makefile and type `make clean` and `make source -jthread` to build `$(VINA_CUDA_METHODS)` that compile the kernel files on the fly (this would take some time at the first use).
+ 5. After a successful compiling (there may be some warnings about the BOOST library, which can usually be ignored without affecting the normal operation of the programme), you will see the `$(Vina-GPU-2-1-CUDA)` in the work directory.
+ 6. In the work directory,type `$(Vina-GPU-2-1-CUDA) --config ./input_file_example/1u1b_config.txt` to run the Vina-CUDA method.
+ 7. once you successfully run `$(VINA_CUDA_METHODS)`, its runtime can be further reduced by typing `make clean` and `make` to build it without compiling kernel files.
+ 8. other compile options:
+     1. -g : debug;
+     2. -DTIME_ANALYSIS: output runtime analysis in `gpu_runtime.log`;
+     3. -DDISPLAY_ADDITION_INFO: print addition information;
+     4. -GRID_DIM: set the grid size (the value of `GRID_DIM1*GRID_DIM2` (eg. 64*128) must equal to the value of `thread`(eg. 8192) parameter);
+     5. -DSAMLL_BOX:  the volume of the searching box less than 30/30/30 (will take less GPU memory);
+     6. -DLARGE_BOX: the volume of the searching box less than 70/70/70 (will take more GPU memory);
+ 9.
