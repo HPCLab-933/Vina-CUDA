@@ -5,9 +5,9 @@ In this project, we propose **Vina-CUDA** based on [Vina-GPU 2.1](https://github
 
 ## The Acceleration and Accuracy of Vina-CUDA
 * The runtime acceleration of Vina-CUDA comprae with the Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W-GPU 2.1 in Autodock-GPU, CASF-2016, PPARG, Astex, and PoseBuster librarys.
-
-* Accuracy comparison of Vina-CUDA on AutoDock-GPU and CASF-2016 library.
-
+![Vina-CUDA](./image/Autodck-GPU-RSMD-SCORE-Result.jpg)
+* Accuracy comparison of Vina-CUDA on AutoDock-GPU library.
+![Vina-CUDA](./image/docking_runtime_for_program_update.png)
  ## Compiling and Running Methods
  ### Linux
  **Note**: At least 8M stack size is needed. To change the stack size, use `ulimit -s 8192`.
