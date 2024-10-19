@@ -1,7 +1,7 @@
 # Need to be modified according to different users
-WORK_DIR=/mnt/disk4/DingXiaoyu/Autodock-Vina-CUDA-master
-BOOST_LIB_PATH=/mnt/disk4/DingXiaoyu/Vina-GPU-2.1-old/boost_1_77_0
-NVCC_COMPILER=/mnt/disk4/DingXiaoyu/Vina-GPU-2.1-CUDA/cuda-12.2/bin/nvcc
+WORK_DIR=/your/path/to/Autodock-Vina-CUDA-master
+BOOST_LIB_PATH=/your/path/to/boost_1_77_0
+NVCC_COMPILER=/your/path/to/cuda-12.2/bin/nvcc
 GRID_DIM=-DGRID_DIM1=64 -DGRID_DIM2=128
 DOCKING_BOX_SIZE=-DLARGE_BOX
 
