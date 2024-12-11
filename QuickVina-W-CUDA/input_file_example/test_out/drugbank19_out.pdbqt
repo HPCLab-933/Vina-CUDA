@@ -1,0 +1,378 @@
+MODEL 1
+REMARK VINA RESULT:      -3.9      0.000      0.000
+REMARK  Name = 6137
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SD_1  and  CG_7
+REMARK    2  A    between atoms: SD_1  and  CE_9
+REMARK    3  A    between atoms: O_2  and  C_8
+REMARK    4  A    between atoms: N_4  and  CA_6
+REMARK    5  A    between atoms: CB_5  and  CA_6
+REMARK    6  A    between atoms: CB_5  and  CG_7
+REMARK    7  A    between atoms: CA_6  and  C_8
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  MET A   1     -27.225 -31.279  18.282  0.00  0.00    +0.161 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   MET A   1     -26.253 -30.330  18.834  0.00  0.00    -0.318 NA
+ATOM      3  H1  MET A   1     -25.324 -30.545  18.471  0.00  0.00    +0.119 HD
+ATOM      4  H2  MET A   1     -26.472 -29.389  18.509  0.00  0.00    +0.119 HD
+ENDBRANCH   1   2
+BRANCH   1   5
+ATOM      5  C   MET A   1     -28.244 -31.538  19.378  0.00  0.00    +0.322 C 
+ATOM      6  OXT MET A   1     -29.243 -30.860  19.584  0.00  0.00    -0.249 OA
+BRANCH   5   7
+ATOM      7  O   MET A   1     -27.942 -32.640  20.112  0.00  0.00    -0.480 OA
+ATOM      8  H   MET A   1     -27.682 -32.409  21.029  0.00  0.00    +0.295 HD
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+BRANCH   1   9
+ATOM      9  CB  MET A   1     -26.499 -32.572  17.883  0.00  0.00    +0.040 C 
+BRANCH   9  10
+ATOM     10  CG  MET A   1     -24.985 -32.576  18.110  0.00  0.00    +0.071 C 
+BRANCH  10  11
+ATOM     11  SD  MET A   1     -24.120 -33.848  17.142  0.00  0.00    -0.164 S 
+ATOM     12  CE  MET A   1     -22.846 -34.273  18.350  0.00  0.00    +0.084 C 
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 6
+ENDMDL
+MODEL 2
+REMARK VINA RESULT:      -3.7      1.614      1.830
+REMARK  Name = 6137
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SD_1  and  CG_7
+REMARK    2  A    between atoms: SD_1  and  CE_9
+REMARK    3  A    between atoms: O_2  and  C_8
+REMARK    4  A    between atoms: N_4  and  CA_6
+REMARK    5  A    between atoms: CB_5  and  CA_6
+REMARK    6  A    between atoms: CB_5  and  CG_7
+REMARK    7  A    between atoms: CA_6  and  C_8
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  MET A   1     -26.913 -31.424  18.238  0.00  0.00    +0.161 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   MET A   1     -26.364 -30.246  18.918  0.00  0.00    -0.318 NA
+ATOM      3  H1  MET A   1     -25.494 -30.499  19.388  0.00  0.00    +0.119 HD
+ATOM      4  H2  MET A   1     -26.117 -29.538  18.229  0.00  0.00    +0.119 HD
+ENDBRANCH   1   2
+BRANCH   1   5
+ATOM      5  C   MET A   1     -27.839 -32.102  19.232  0.00  0.00    +0.322 C 
+ATOM      6  OXT MET A   1     -28.135 -33.290  19.221  0.00  0.00    -0.249 OA
+BRANCH   5   7
+ATOM      7  O   MET A   1     -28.301 -31.241  20.177  0.00  0.00    -0.480 OA
+ATOM      8  H   MET A   1     -28.857 -30.534  19.787  0.00  0.00    +0.295 HD
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+BRANCH   1   9
+ATOM      9  CB  MET A   1     -25.762 -32.354  17.830  0.00  0.00    +0.040 C 
+BRANCH   9  10
+ATOM     10  CG  MET A   1     -25.429 -32.377  16.335  0.00  0.00    +0.071 C 
+BRANCH  10  11
+ATOM     11  SD  MET A   1     -23.735 -32.935  15.988  0.00  0.00    -0.164 S 
+ATOM     12  CE  MET A   1     -24.132 -34.287  14.857  0.00  0.00    +0.084 C 
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 6
+ENDMDL
+MODEL 3
+REMARK VINA RESULT:      -3.7      1.360      1.458
+REMARK  Name = 6137
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SD_1  and  CG_7
+REMARK    2  A    between atoms: SD_1  and  CE_9
+REMARK    3  A    between atoms: O_2  and  C_8
+REMARK    4  A    between atoms: N_4  and  CA_6
+REMARK    5  A    between atoms: CB_5  and  CA_6
+REMARK    6  A    between atoms: CB_5  and  CG_7
+REMARK    7  A    between atoms: CA_6  and  C_8
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  MET A   1     -27.647 -30.975  18.572  0.00  0.00    +0.161 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   MET A   1     -26.472 -30.147  18.863  0.00  0.00    -0.318 NA
+ATOM      3  H1  MET A   1     -26.757 -29.332  19.407  0.00  0.00    +0.119 HD
+ATOM      4  H2  MET A   1     -25.825 -30.668  19.453  0.00  0.00    +0.119 HD
+ENDBRANCH   1   2
+BRANCH   1   5
+ATOM      5  C   MET A   1     -28.707 -30.590  19.587  0.00  0.00    +0.322 C 
+ATOM      6  OXT MET A   1     -28.594 -29.699  20.420  0.00  0.00    -0.249 OA
+BRANCH   5   7
+ATOM      7  O   MET A   1     -29.836 -31.335  19.461  0.00  0.00    -0.480 OA
+ATOM      8  H   MET A   1     -29.653 -32.295  19.544  0.00  0.00    +0.295 HD
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+BRANCH   1   9
+ATOM      9  CB  MET A   1     -27.265 -32.457  18.703  0.00  0.00    +0.040 C 
+BRANCH   9  10
+ATOM     10  CG  MET A   1     -25.838 -32.812  18.277  0.00  0.00    +0.071 C 
+BRANCH  10  11
+ATOM     11  SD  MET A   1     -25.776 -33.919  16.837  0.00  0.00    -0.164 S 
+ATOM     12  CE  MET A   1     -23.984 -33.947  16.606  0.00  0.00    +0.084 C 
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 6
+ENDMDL
+MODEL 4
+REMARK VINA RESULT:      -3.6      1.999      2.606
+REMARK  Name = 6137
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SD_1  and  CG_7
+REMARK    2  A    between atoms: SD_1  and  CE_9
+REMARK    3  A    between atoms: O_2  and  C_8
+REMARK    4  A    between atoms: N_4  and  CA_6
+REMARK    5  A    between atoms: CB_5  and  CA_6
+REMARK    6  A    between atoms: CB_5  and  CG_7
+REMARK    7  A    between atoms: CA_6  and  C_8
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  MET A   1     -25.411 -32.459  18.047  0.00  0.00    +0.161 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   MET A   1     -25.711 -31.122  18.571  0.00  0.00    -0.318 NA
+ATOM      3  H1  MET A   1     -26.676 -30.878  18.348  0.00  0.00    +0.119 HD
+ATOM      4  H2  MET A   1     -25.650 -31.133  19.588  0.00  0.00    +0.119 HD
+ENDBRANCH   1   2
+BRANCH   1   5
+ATOM      5  C   MET A   1     -26.336 -33.422  18.769  0.00  0.00    +0.322 C 
+ATOM      6  OXT MET A   1     -27.507 -33.198  19.047  0.00  0.00    -0.249 OA
+BRANCH   5   7
+ATOM      7  O   MET A   1     -25.726 -34.600  19.062  0.00  0.00    -0.480 OA
+ATOM      8  H   MET A   1     -26.330 -35.364  18.943  0.00  0.00    +0.295 HD
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+BRANCH   1   9
+ATOM      9  CB  MET A   1     -23.937 -32.791  18.325  0.00  0.00    +0.040 C 
+BRANCH   9  10
+ATOM     10  CG  MET A   1     -23.079 -33.074  17.089  0.00  0.00    +0.071 C 
+BRANCH  10  11
+ATOM     11  SD  MET A   1     -21.582 -34.034  17.463  0.00  0.00    -0.164 S 
+ATOM     12  CE  MET A   1     -20.411 -33.092  16.459  0.00  0.00    +0.084 C 
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 6
+ENDMDL
+MODEL 5
+REMARK VINA RESULT:      -3.6      1.820      2.491
+REMARK  Name = 6137
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SD_1  and  CG_7
+REMARK    2  A    between atoms: SD_1  and  CE_9
+REMARK    3  A    between atoms: O_2  and  C_8
+REMARK    4  A    between atoms: N_4  and  CA_6
+REMARK    5  A    between atoms: CB_5  and  CA_6
+REMARK    6  A    between atoms: CB_5  and  CG_7
+REMARK    7  A    between atoms: CA_6  and  C_8
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  MET A   1     -27.325 -31.078  18.337  0.00  0.00    +0.161 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   MET A   1     -26.394 -30.116  18.937  0.00  0.00    -0.318 NA
+ATOM      3  H1  MET A   1     -25.660 -30.619  19.435  0.00  0.00    +0.119 HD
+ATOM      4  H2  MET A   1     -25.927 -29.589  18.201  0.00  0.00    +0.119 HD
+ENDBRANCH   1   2
+BRANCH   1   5
+ATOM      5  C   MET A   1     -28.355 -31.403  19.404  0.00  0.00    +0.322 C 
+ATOM      6  OXT MET A   1     -29.388 -30.774  19.599  0.00  0.00    -0.249 OA
+BRANCH   5   7
+ATOM      7  O   MET A   1     -28.022 -32.506  20.123  0.00  0.00    -0.480 OA
+ATOM      8  H   MET A   1     -28.811 -33.037  20.365  0.00  0.00    +0.295 HD
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+BRANCH   1   9
+ATOM      9  CB  MET A   1     -26.550 -32.334  17.914  0.00  0.00    +0.040 C 
+BRANCH   9  10
+ATOM     10  CG  MET A   1     -26.939 -32.924  16.555  0.00  0.00    +0.071 C 
+BRANCH  10  11
+ATOM     11  SD  MET A   1     -26.979 -34.741  16.549  0.00  0.00    -0.164 S 
+ATOM     12  CE  MET A   1     -28.729 -34.962  16.159  0.00  0.00    +0.084 C 
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 6
+ENDMDL
+MODEL 6
+REMARK VINA RESULT:      -3.6      3.085      3.753
+REMARK  Name = 6137
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SD_1  and  CG_7
+REMARK    2  A    between atoms: SD_1  and  CE_9
+REMARK    3  A    between atoms: O_2  and  C_8
+REMARK    4  A    between atoms: N_4  and  CA_6
+REMARK    5  A    between atoms: CB_5  and  CA_6
+REMARK    6  A    between atoms: CB_5  and  CG_7
+REMARK    7  A    between atoms: CA_6  and  C_8
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  MET A   1     -28.068 -30.248  19.062  0.00  0.00    +0.161 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   MET A   1     -26.627 -29.982  19.120  0.00  0.00    -0.318 NA
+ATOM      3  H1  MET A   1     -26.431 -29.077  18.694  0.00  0.00    +0.119 HD
+ATOM      4  H2  MET A   1     -26.332 -29.907  20.093  0.00  0.00    +0.119 HD
+ENDBRANCH   1   2
+BRANCH   1   5
+ATOM      5  C   MET A   1     -28.719 -29.308  20.061  0.00  0.00    +0.322 C 
+ATOM      6  OXT MET A   1     -29.910 -29.023  20.086  0.00  0.00    -0.249 OA
+BRANCH   5   7
+ATOM      7  O   MET A   1     -27.831 -28.821  20.966  0.00  0.00    -0.480 OA
+ATOM      8  H   MET A   1     -28.261 -28.228  21.618  0.00  0.00    +0.295 HD
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+BRANCH   1   9
+ATOM      9  CB  MET A   1     -28.326 -31.716  19.433  0.00  0.00    +0.040 C 
+BRANCH   9  10
+ATOM     10  CG  MET A   1     -28.031 -32.737  18.331  0.00  0.00    +0.071 C 
+BRANCH  10  11
+ATOM     11  SD  MET A   1     -28.507 -32.159  16.675  0.00  0.00    -0.164 S 
+ATOM     12  CE  MET A   1     -30.277 -32.512  16.774  0.00  0.00    +0.084 C 
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 6
+ENDMDL
+MODEL 7
+REMARK VINA RESULT:      -3.5      2.225      2.250
+REMARK  Name = 6137
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SD_1  and  CG_7
+REMARK    2  A    between atoms: SD_1  and  CE_9
+REMARK    3  A    between atoms: O_2  and  C_8
+REMARK    4  A    between atoms: N_4  and  CA_6
+REMARK    5  A    between atoms: CB_5  and  CA_6
+REMARK    6  A    between atoms: CB_5  and  CG_7
+REMARK    7  A    between atoms: CA_6  and  C_8
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  MET A   1     -26.329 -33.316  18.587  0.00  0.00    +0.161 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   MET A   1     -25.671 -34.527  19.089  0.00  0.00    -0.318 NA
+ATOM      3  H1  MET A   1     -25.091 -34.291  19.894  0.00  0.00    +0.119 HD
+ATOM      4  H2  MET A   1     -26.375 -35.182  19.429  0.00  0.00    +0.119 HD
+ENDBRANCH   1   2
+BRANCH   1   5
+ATOM      5  C   MET A   1     -27.722 -33.302  19.192  0.00  0.00    +0.322 C 
+ATOM      6  OXT MET A   1     -28.761 -33.158  18.560  0.00  0.00    -0.249 OA
+BRANCH   5   7
+ATOM      7  O   MET A   1     -27.702 -33.494  20.536  0.00  0.00    -0.480 OA
+ATOM      8  H   MET A   1     -28.246 -32.829  21.009  0.00  0.00    +0.295 HD
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+BRANCH   1   9
+ATOM      9  CB  MET A   1     -26.390 -33.372  17.054  0.00  0.00    +0.040 C 
+BRANCH   9  10
+ATOM     10  CG  MET A   1     -25.313 -32.569  16.320  0.00  0.00    +0.071 C 
+BRANCH  10  11
+ATOM     11  SD  MET A   1     -23.968 -33.605  15.669  0.00  0.00    -0.164 S 
+ATOM     12  CE  MET A   1     -22.621 -32.945  16.675  0.00  0.00    +0.084 C 
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 6
+ENDMDL
+MODEL 8
+REMARK VINA RESULT:      -3.5      3.922      4.789
+REMARK  Name = 6137
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SD_1  and  CG_7
+REMARK    2  A    between atoms: SD_1  and  CE_9
+REMARK    3  A    between atoms: O_2  and  C_8
+REMARK    4  A    between atoms: N_4  and  CA_6
+REMARK    5  A    between atoms: CB_5  and  CA_6
+REMARK    6  A    between atoms: CB_5  and  CG_7
+REMARK    7  A    between atoms: CA_6  and  C_8
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  MET A   1     -23.563 -33.422  17.212  0.00  0.00    +0.161 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   MET A   1     -24.614 -32.399  17.230  0.00  0.00    -0.318 NA
+ATOM      3  H1  MET A   1     -24.197 -31.480  17.084  0.00  0.00    +0.119 HD
+ATOM      4  H2  MET A   1     -25.249 -32.549  16.446  0.00  0.00    +0.119 HD
+ENDBRANCH   1   2
+BRANCH   1   5
+ATOM      5  C   MET A   1     -23.457 -33.953  18.631  0.00  0.00    +0.322 C 
+ATOM      6  OXT MET A   1     -22.427 -33.992  19.292  0.00  0.00    -0.249 OA
+BRANCH   5   7
+ATOM      7  O   MET A   1     -24.655 -34.368  19.117  0.00  0.00    -0.480 OA
+ATOM      8  H   MET A   1     -25.042 -35.087  18.572  0.00  0.00    +0.295 HD
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+BRANCH   1   9
+ATOM      9  CB  MET A   1     -22.242 -32.782  16.760  0.00  0.00    +0.040 C 
+BRANCH   9  10
+ATOM     10  CG  MET A   1     -21.386 -33.631  15.817  0.00  0.00    +0.071 C 
+BRANCH  10  11
+ATOM     11  SD  MET A   1     -19.916 -34.334  16.623  0.00  0.00    -0.164 S 
+ATOM     12  CE  MET A   1     -19.658 -35.738  15.516  0.00  0.00    +0.084 C 
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 6
+ENDMDL
+MODEL 9
+REMARK VINA RESULT:      -3.4      2.360      2.597
+REMARK  Name = 6137
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: SD_1  and  CG_7
+REMARK    2  A    between atoms: SD_1  and  CE_9
+REMARK    3  A    between atoms: O_2  and  C_8
+REMARK    4  A    between atoms: N_4  and  CA_6
+REMARK    5  A    between atoms: CB_5  and  CA_6
+REMARK    6  A    between atoms: CB_5  and  CG_7
+REMARK    7  A    between atoms: CA_6  and  C_8
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  MET A   1     -28.681 -31.188  19.257  0.00  0.00    +0.161 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   MET A   1     -30.091 -31.592  19.267  0.00  0.00    -0.318 NA
+ATOM      3  H1  MET A   1     -30.211 -32.394  19.886  0.00  0.00    +0.119 HD
+ATOM      4  H2  MET A   1     -30.658 -30.843  19.661  0.00  0.00    +0.119 HD
+ENDBRANCH   1   2
+BRANCH   1   5
+ATOM      5  C   MET A   1     -28.626 -29.803  19.875  0.00  0.00    +0.322 C 
+ATOM      6  OXT MET A   1     -29.602 -29.138  20.201  0.00  0.00    -0.249 OA
+BRANCH   5   7
+ATOM      7  O   MET A   1     -27.352 -29.371  20.061  0.00  0.00    -0.480 OA
+ATOM      8  H   MET A   1     -27.305 -28.634  20.706  0.00  0.00    +0.295 HD
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+BRANCH   1   9
+ATOM      9  CB  MET A   1     -28.171 -31.170  17.809  0.00  0.00    +0.040 C 
+BRANCH   9  10
+ATOM     10  CG  MET A   1     -26.750 -31.702  17.603  0.00  0.00    +0.071 C 
+BRANCH  10  11
+ATOM     11  SD  MET A   1     -26.491 -33.349  18.327  0.00  0.00    -0.164 S 
+ATOM     12  CE  MET A   1     -25.206 -33.931  17.198  0.00  0.00    +0.084 C 
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 6
+ENDMDL

@@ -1,0 +1,10 @@
+receptor = ./test/2bm2_protein.pdbqt
+ligand_directory = ./test/2bm2/
+output_directory = ./test/2bm2/
+center_x = 40.415
+center_y = 110.986
+center_z = 82.673
+size_x = 29
+size_y = 29
+size_z = 29
+thread = 16384

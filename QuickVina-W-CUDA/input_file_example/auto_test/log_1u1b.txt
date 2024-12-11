@@ -1,0 +1,1470 @@
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank1_out.pdbqt
+Reading input ... reading time: 0.007757
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -1642381744 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.18624
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010529 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank1.pdbqt] , the Atom size is: [19] , the torsion_sizes is : [7] 
+m_ptr->ligand.pairs.num_pairs = 52
+m_ptr->ligand.pairs.num_pairs = 52
+m_ptr->ligand.rigid.num_children [num_torsion] = 7
+m_ptr->m_num_movable_atoms = 19
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083677
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 6  || par.mc.ssd_par.bfgs_steps[ligand_count] = 16
+
+Elapsed time for kernel_monte-GPU calculation: 0.306398 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank1 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.6      0.000      0.000
+   2         -5.6      1.425      1.558
+   3         -5.2      1.647      2.070
+   4         -5.1      2.020      2.927
+   5         -5.1      2.187      3.004
+   6         -5.1      2.081      3.002
+   7         -5.1      2.357      3.162
+   8         -5.1      1.948      2.393
+   9         -5.0      2.022      2.726
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank1 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.739 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank2_out.pdbqt
+Reading input ... reading time: 0.005188
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 1897139340 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.181315
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010861 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank2.pdbqt] , the Atom size is: [41] , the torsion_sizes is : [11] 
+m_ptr->ligand.pairs.num_pairs = 339
+m_ptr->ligand.pairs.num_pairs = 339
+m_ptr->ligand.rigid.num_children [num_torsion] = 11
+m_ptr->m_num_movable_atoms = 41
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.082692
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 19  || par.mc.ssd_par.bfgs_steps[ligand_count] = 23
+Perform docking|=======                              |
+Elapsed time for kernel_monte-GPU calculation: 1.406387 s 
+Perform docking| =======                             |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank2 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.9      0.000      0.000
+   2         -6.8      5.542      8.303
+   3         -6.7      2.552     10.320
+   4         -6.7      2.348      3.577
+   5         -6.5      2.656      9.749
+   6         -6.5      2.525     10.339
+   7         -6.5      2.361      9.963
+   8         -6.4      4.685      7.754
+   9         -6.3      2.124      3.200
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank2 output...done.
+
+AutoDockVina-GPU3 total runtime = 1.871 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank3_out.pdbqt
+Reading input ... reading time: 0.014488
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -495373922 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.183908
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.009322 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank3.pdbqt] , the Atom size is: [15] , the torsion_sizes is : [5] 
+m_ptr->ligand.pairs.num_pairs = 20
+m_ptr->ligand.pairs.num_pairs = 20
+m_ptr->ligand.rigid.num_children [num_torsion] = 5
+m_ptr->m_num_movable_atoms = 15
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083145
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 3  || par.mc.ssd_par.bfgs_steps[ligand_count] = 15
+
+Elapsed time for kernel_monte-GPU calculation: 0.166095 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank3 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -4.6      0.000      0.000
+   2         -4.5      1.781      1.923
+   3         -4.5      2.492      2.923
+   4         -4.3      2.762      4.519
+   5         -4.2      4.781      6.133
+   6         -4.2      3.797      5.252
+   7         -4.2      0.932      1.265
+   8         -4.1      4.647      6.067
+   9         -4.1      3.925      6.015
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank3 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.581 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank4_out.pdbqt
+Reading input ... reading time: 0.005315
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -1233085590 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.184045
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010233 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank4.pdbqt] , the Atom size is: [33] , the torsion_sizes is : [11] 
+m_ptr->ligand.pairs.num_pairs = 223
+m_ptr->ligand.pairs.num_pairs = 223
+m_ptr->ligand.rigid.num_children [num_torsion] = 11
+m_ptr->m_num_movable_atoms = 33
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083035
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 15  || par.mc.ssd_par.bfgs_steps[ligand_count] = 21
+Perform docking|=======                              |
+Elapsed time for kernel_monte-GPU calculation: 1.146933 s 
+Perform docking| =======                             |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank4 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.3      0.000      0.000
+   2         -6.3      2.517      3.113
+   3         -6.2      1.505      1.853
+   4         -6.1      2.674      4.713
+   5         -6.1      1.194      1.394
+   6         -6.0      2.840      4.035
+   7         -5.9      4.062      6.693
+   8         -5.9      2.784      4.130
+   9         -5.9      2.438      4.610
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank4 output...done.
+
+AutoDockVina-GPU3 total runtime = 1.593 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank5_out.pdbqt
+Reading input ... reading time: 0.007809
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 1506478688 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.185974
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010226 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank5.pdbqt] , the Atom size is: [7] , the torsion_sizes is : [2] 
+m_ptr->ligand.pairs.num_pairs = 0
+m_ptr->ligand.pairs.num_pairs = 0
+m_ptr->ligand.rigid.num_children [num_torsion] = 2
+m_ptr->m_num_movable_atoms = 7
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.082836
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 1  || par.mc.ssd_par.bfgs_steps[ligand_count] = 12
+
+Elapsed time for kernel_monte-GPU calculation: 0.070353 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank5 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -3.5      0.000      0.000
+   2         -3.4      1.451      2.781
+   3         -3.3      1.516      2.616
+   4         -3.2      2.527      3.399
+   5         -3.2      1.108      1.773
+   6         -3.2      7.808      8.687
+   7         -3.2      1.620      2.399
+   8         -3.2      2.053      2.949
+   9         -3.2      5.956      6.927
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank5 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.481 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank6_out.pdbqt
+Reading input ... reading time: 0.00728
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 737644350 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.187453
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010218 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank6.pdbqt] , the Atom size is: [15] , the torsion_sizes is : [5] 
+m_ptr->ligand.pairs.num_pairs = 25
+m_ptr->ligand.pairs.num_pairs = 25
+m_ptr->ligand.rigid.num_children [num_torsion] = 5
+m_ptr->m_num_movable_atoms = 15
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.084074
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 3  || par.mc.ssd_par.bfgs_steps[ligand_count] = 15
+
+Elapsed time for kernel_monte-GPU calculation: 0.163469 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank6 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.1      0.000      0.000
+   2         -4.9      1.841      2.445
+   3         -4.9      1.707      1.865
+   4         -4.9      2.868      3.892
+   5         -4.8      2.927      3.768
+   6         -4.7      1.462      1.592
+   7         -4.7      2.990      4.009
+   8         -4.7      1.777      2.199
+   9         -4.7      1.489      2.169
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank6 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.583 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank7_out.pdbqt
+Reading input ... reading time: 0.007734
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -20815556 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.183576
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010165 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank7.pdbqt] , the Atom size is: [19] , the torsion_sizes is : [6] 
+m_ptr->ligand.pairs.num_pairs = 55
+m_ptr->ligand.pairs.num_pairs = 55
+m_ptr->ligand.rigid.num_children [num_torsion] = 6
+m_ptr->m_num_movable_atoms = 19
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.084083
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 5  || par.mc.ssd_par.bfgs_steps[ligand_count] = 16
+
+Elapsed time for kernel_monte-GPU calculation: 0.264657 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank7 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.3      0.000      0.000
+   2         -4.9      3.829      6.963
+   3         -4.8      1.690      1.969
+   4         -4.6      2.554      5.657
+   5         -4.6      1.369      1.635
+   6         -4.5      2.824      6.793
+   7         -4.5      2.305      6.242
+   8         -4.4      3.066      5.745
+   9         -4.3      3.563      6.313
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank7 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.680 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank8_out.pdbqt
+Reading input ... reading time: 0.007376
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 78583124 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.183685
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010331 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank8.pdbqt] , the Atom size is: [8] , the torsion_sizes is : [3] 
+m_ptr->ligand.pairs.num_pairs = 3
+m_ptr->ligand.pairs.num_pairs = 3
+m_ptr->ligand.rigid.num_children [num_torsion] = 3
+m_ptr->m_num_movable_atoms = 8
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.084281
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 1  || par.mc.ssd_par.bfgs_steps[ligand_count] = 12
+
+Elapsed time for kernel_monte-GPU calculation: 0.070946 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank8 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -3.0      0.000      0.000
+   2         -3.0      1.919      2.738
+   3         -2.9      1.959      2.772
+   4         -2.9      2.039      2.666
+   5         -2.9      2.037      2.748
+   6         -2.9      1.938      2.711
+   7         -2.9      2.048      2.649
+   8         -2.9      2.122      2.869
+   9         -2.9      2.399      3.487
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank8 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.477 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank9_out.pdbqt
+Reading input ... reading time: 0.00872
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -669502186 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.18318
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.011060 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank9.pdbqt] , the Atom size is: [15] , the torsion_sizes is : [8] 
+m_ptr->ligand.pairs.num_pairs = 17
+m_ptr->ligand.pairs.num_pairs = 17
+m_ptr->ligand.rigid.num_children [num_torsion] = 8
+m_ptr->m_num_movable_atoms = 15
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.08452
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 5  || par.mc.ssd_par.bfgs_steps[ligand_count] = 15
+
+Elapsed time for kernel_monte-GPU calculation: 0.308865 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank9 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -4.5      0.000      0.000
+   2         -4.4      2.603      3.280
+   3         -4.3      2.041      2.270
+   4         -4.3      2.492      3.049
+   5         -4.3      1.760      2.252
+   6         -4.2      1.521      1.525
+   7         -4.1      3.645      5.045
+   8         -4.1      3.969      5.750
+   9         -4.1      1.882      2.114
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank9 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.739 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank10_out.pdbqt
+Reading input ... reading time: 0.005458
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 1991413088 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.18338
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010258 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank10.pdbqt] , the Atom size is: [19] , the torsion_sizes is : [7] 
+m_ptr->ligand.pairs.num_pairs = 31
+m_ptr->ligand.pairs.num_pairs = 31
+m_ptr->ligand.rigid.num_children [num_torsion] = 7
+m_ptr->m_num_movable_atoms = 19
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.084109
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 6  || par.mc.ssd_par.bfgs_steps[ligand_count] = 16
+
+Elapsed time for kernel_monte-GPU calculation: 0.364207 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank10 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -4.8      0.000      0.000
+   2         -4.7      0.889      1.114
+   3         -4.7      2.341      3.139
+   4         -4.6      3.743      6.292
+   5         -4.6      1.867      2.270
+   6         -4.6      2.107      2.497
+   7         -4.5      2.306      3.039
+   8         -4.5      1.453      1.680
+   9         -4.5      3.391      6.185
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank10 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.776 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank11_out.pdbqt
+Reading input ... reading time: 0.006477
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 391499182 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.187347
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010247 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank11.pdbqt] , the Atom size is: [16] , the torsion_sizes is : [6] 
+m_ptr->ligand.pairs.num_pairs = 17
+m_ptr->ligand.pairs.num_pairs = 17
+m_ptr->ligand.rigid.num_children [num_torsion] = 6
+m_ptr->m_num_movable_atoms = 16
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.084016
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 4  || par.mc.ssd_par.bfgs_steps[ligand_count] = 15
+
+Elapsed time for kernel_monte-GPU calculation: 0.192591 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank11 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.1      0.000      0.000
+   2         -5.0      3.291      4.893
+   3         -5.0      2.334      5.181
+   4         -5.0      3.363      5.080
+   5         -4.8      2.485      4.419
+   6         -4.7      2.065      5.178
+   7         -4.7      4.292      6.953
+   8         -4.7     10.288     11.273
+   9         -4.6      3.245      5.866
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank11 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.615 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank12_out.pdbqt
+Reading input ... reading time: 0.010202
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 498257931 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.183617
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.009297 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank12.pdbqt] , the Atom size is: [20] , the torsion_sizes is : [13] 
+m_ptr->ligand.pairs.num_pairs = 55
+m_ptr->ligand.pairs.num_pairs = 55
+m_ptr->ligand.rigid.num_children [num_torsion] = 13
+m_ptr->m_num_movable_atoms = 20
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.084069
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 10  || par.mc.ssd_par.bfgs_steps[ligand_count] = 16
+
+Elapsed time for kernel_monte-GPU calculation: 0.812025 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank12 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -4.3      0.000      0.000
+   2         -3.9      1.916      6.170
+   3         -3.9      1.749      2.065
+   4         -3.7      1.825      2.917
+   5         -3.6      1.326      1.346
+   6         -3.6      2.062      2.662
+   7         -3.6      1.806      1.960
+   8         -3.6      1.483      1.664
+   9         -3.6      1.429      1.731
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank12 output...done.
+
+AutoDockVina-GPU3 total runtime = 1.237 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank13_out.pdbqt
+Reading input ... reading time: 0.007654
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -1990637496 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.184016
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010152 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank13.pdbqt] , the Atom size is: [13] , the torsion_sizes is : [6] 
+m_ptr->ligand.pairs.num_pairs = 10
+m_ptr->ligand.pairs.num_pairs = 10
+m_ptr->ligand.rigid.num_children [num_torsion] = 6
+m_ptr->m_num_movable_atoms = 13
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.084415
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 2  || par.mc.ssd_par.bfgs_steps[ligand_count] = 14
+
+Elapsed time for kernel_monte-GPU calculation: 0.139580 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank13 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -4.2      0.000      0.000
+   2         -4.0      1.424      1.875
+   3         -4.0      9.813     10.277
+   4         -3.9      2.793      4.386
+   5         -3.9      2.732      3.697
+   6         -3.9      1.963      2.366
+   7         -3.9      1.700      3.791
+   8         -3.9      3.148      4.743
+   9         -3.8      7.215      8.625
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank13 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.573 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank14_out.pdbqt
+Reading input ... reading time: 0.011171
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -1880863496 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.18347
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010281 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank14.pdbqt] , the Atom size is: [14] , the torsion_sizes is : [7] 
+m_ptr->ligand.pairs.num_pairs = 11
+m_ptr->ligand.pairs.num_pairs = 11
+m_ptr->ligand.rigid.num_children [num_torsion] = 7
+m_ptr->m_num_movable_atoms = 14
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.084097
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 3  || par.mc.ssd_par.bfgs_steps[ligand_count] = 14
+
+Elapsed time for kernel_monte-GPU calculation: 0.200196 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank14 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -4.0      0.000      0.000
+   2         -3.9      3.242      4.348
+   3         -3.9      3.832      5.315
+   4         -3.9      3.803      5.143
+   5         -3.8      2.579      4.153
+   6         -3.8      3.453      4.745
+   7         -3.7      9.673     10.521
+   8         -3.7      9.665     10.474
+   9         -3.7      2.811      4.369
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank14 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.623 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank15_out.pdbqt
+Reading input ... reading time: 0.007672
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -64417010 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.185053
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010300 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank15.pdbqt] , the Atom size is: [15] , the torsion_sizes is : [5] 
+m_ptr->ligand.pairs.num_pairs = 16
+m_ptr->ligand.pairs.num_pairs = 16
+m_ptr->ligand.rigid.num_children [num_torsion] = 5
+m_ptr->m_num_movable_atoms = 15
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.08471
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 3  || par.mc.ssd_par.bfgs_steps[ligand_count] = 15
+
+Elapsed time for kernel_monte-GPU calculation: 0.185816 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank15 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -3.9      0.000      0.000
+   2         -3.9      1.447      1.925
+   3         -3.9      1.204      1.456
+   4         -3.8      1.924      2.130
+   5         -3.8      1.958      4.538
+   6         -3.7      2.078      3.890
+   7         -3.7      1.645      4.521
+   8         -3.7      3.254      5.597
+   9         -3.7      3.775      5.911
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank15 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.605 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank16_out.pdbqt
+Reading input ... reading time: 0.008896
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 1752029568 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.182766
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010203 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank16.pdbqt] , the Atom size is: [29] , the torsion_sizes is : [9] 
+m_ptr->ligand.pairs.num_pairs = 140
+m_ptr->ligand.pairs.num_pairs = 140
+m_ptr->ligand.rigid.num_children [num_torsion] = 9
+m_ptr->m_num_movable_atoms = 29
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083992
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 12  || par.mc.ssd_par.bfgs_steps[ligand_count] = 19
+
+Elapsed time for kernel_monte-GPU calculation: 0.635880 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank16 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.7      0.000      0.000
+   2         -6.3      2.283      4.442
+   3         -6.3      4.454      7.391
+   4         -6.3      2.619      4.184
+   5         -6.1      2.436      3.787
+   6         -6.0      2.214      3.994
+   7         -5.9      1.870      2.949
+   8         -5.8      0.880      1.203
+   9         -5.8      2.656      4.198
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank16 output...done.
+
+AutoDockVina-GPU3 total runtime = 1.081 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank17_out.pdbqt
+Reading input ... reading time: 0.008966
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 996585942 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.183269
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010250 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank17.pdbqt] , the Atom size is: [21] , the torsion_sizes is : [14] 
+m_ptr->ligand.pairs.num_pairs = 135
+m_ptr->ligand.pairs.num_pairs = 135
+m_ptr->ligand.rigid.num_children [num_torsion] = 14
+m_ptr->m_num_movable_atoms = 21
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.08426
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 11  || par.mc.ssd_par.bfgs_steps[ligand_count] = 17
+
+Elapsed time for kernel_monte-GPU calculation: 0.828432 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank17 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -3.9      0.000      0.000
+   2         -3.7      3.538      5.835
+   3         -3.4      3.075      5.317
+   4         -3.3      2.777      5.467
+   5         -3.3      6.642     10.069
+   6         -3.3      1.558      2.470
+   7         -3.3      2.517      4.991
+   8         -3.3      3.985      6.846
+   9         -3.2      3.325      6.045
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank17 output...done.
+
+AutoDockVina-GPU3 total runtime = 1.251 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank18_out.pdbqt
+Reading input ... reading time: 0.009562
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -1471560122 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.183583
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.009337 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank18.pdbqt] , the Atom size is: [11] , the torsion_sizes is : [5] 
+m_ptr->ligand.pairs.num_pairs = 2
+m_ptr->ligand.pairs.num_pairs = 2
+m_ptr->ligand.rigid.num_children [num_torsion] = 5
+m_ptr->m_num_movable_atoms = 11
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.084013
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 1  || par.mc.ssd_par.bfgs_steps[ligand_count] = 13
+
+Elapsed time for kernel_monte-GPU calculation: 0.087200 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank18 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -3.9      0.000      0.000
+   2         -3.6      0.494      1.289
+   3         -3.5      1.660      1.988
+   4         -3.5      1.848      1.957
+   5         -3.5      9.383      9.899
+   6         -3.4      2.050      3.153
+   7         -3.4      1.656      2.123
+   8         -3.4      2.223      3.337
+   9         -3.4      2.055      2.990
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank18 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.506 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank19_out.pdbqt
+Reading input ... reading time: 0.00716
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 2054574160 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.183324
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010141 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank19.pdbqt] , the Atom size is: [12] , the torsion_sizes is : [6] 
+m_ptr->ligand.pairs.num_pairs = 11
+m_ptr->ligand.pairs.num_pairs = 11
+m_ptr->ligand.rigid.num_children [num_torsion] = 6
+m_ptr->m_num_movable_atoms = 12
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.084156
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 2  || par.mc.ssd_par.bfgs_steps[ligand_count] = 14
+
+Elapsed time for kernel_monte-GPU calculation: 0.139611 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank19 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -3.9      0.000      0.000
+   2         -3.9      1.123      1.423
+   3         -3.8      1.603      1.893
+   4         -3.7      1.969      2.653
+   5         -3.7      2.074      2.416
+   6         -3.7      1.403      1.486
+   7         -3.6      1.830      2.542
+   8         -3.5      4.386      5.386
+   9         -3.5      4.247      5.003
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank19 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.558 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank20_out.pdbqt
+Reading input ... reading time: 0.008415
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 444287318 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.185062
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.009320 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank20.pdbqt] , the Atom size is: [17] , the torsion_sizes is : [6] 
+m_ptr->ligand.pairs.num_pairs = 30
+m_ptr->ligand.pairs.num_pairs = 30
+m_ptr->ligand.rigid.num_children [num_torsion] = 6
+m_ptr->m_num_movable_atoms = 17
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.086774
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 4  || par.mc.ssd_par.bfgs_steps[ligand_count] = 15
+
+Elapsed time for kernel_monte-GPU calculation: 0.214586 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank20 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.2      0.000      0.000
+   2         -5.0      1.959      2.381
+   3         -5.0      1.975      2.651
+   4         -4.9      1.010      1.121
+   5         -4.8      3.342      4.108
+   6         -4.8      1.642      1.779
+   7         -4.8      2.289      2.833
+   8         -4.8      7.978      9.975
+   9         -4.8      2.948      3.617
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank20 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.636 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank21_out.pdbqt
+Reading input ... reading time: 0.011146
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -1179389161 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.181489
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010206 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank21.pdbqt] , the Atom size is: [33] , the torsion_sizes is : [9] 
+m_ptr->ligand.pairs.num_pairs = 271
+m_ptr->ligand.pairs.num_pairs = 271
+m_ptr->ligand.rigid.num_children [num_torsion] = 9
+m_ptr->m_num_movable_atoms = 33
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083486
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 14  || par.mc.ssd_par.bfgs_steps[ligand_count] = 21
+
+Elapsed time for kernel_monte-GPU calculation: 0.781756 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank21 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.7      0.000      0.000
+   2         -5.5      2.479      3.784
+   3         -5.2      5.802     10.132
+   4         -5.1      3.055      7.668
+   5         -5.0      1.797      2.264
+   6         -5.0      1.144      1.236
+   7         -4.9      3.142      5.438
+   8         -4.9      1.284      1.487
+   9         -4.9      4.343     10.075
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank21 output...done.
+
+AutoDockVina-GPU3 total runtime = 1.240 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank22_out.pdbqt
+Reading input ... reading time: 0.005237
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -1927472976 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.18053
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.009239 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank22.pdbqt] , the Atom size is: [44] , the torsion_sizes is : [12] 
+m_ptr->ligand.pairs.num_pairs = 675
+m_ptr->ligand.pairs.num_pairs = 675
+m_ptr->ligand.rigid.num_children [num_torsion] = 12
+m_ptr->m_num_movable_atoms = 44
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083164
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 21  || par.mc.ssd_par.bfgs_steps[ligand_count] = 24
+Perform docking|=======                              |
+Elapsed time for kernel_monte-GPU calculation: 1.880617 s 
+Perform docking| =======                             |Perform docking|  =======                            |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank22 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.4      0.000      0.000
+   2         -5.2      8.265     10.015
+   3         -5.1      8.935     18.461
+   4         -5.1      9.817     17.348
+   5         -5.0      8.405      9.905
+   6         -4.9      8.893     18.211
+   7         -4.8      8.659     18.218
+   8         -4.7      9.960     16.946
+   9         -4.6      2.142      3.228
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank22 output...done.
+
+AutoDockVina-GPU3 total runtime = 2.339 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank23_out.pdbqt
+Reading input ... reading time: 0.005126
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 1752950692 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.181468
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.009326 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank23.pdbqt] , the Atom size is: [20] , the torsion_sizes is : [9] 
+m_ptr->ligand.pairs.num_pairs = 47
+m_ptr->ligand.pairs.num_pairs = 47
+m_ptr->ligand.rigid.num_children [num_torsion] = 9
+m_ptr->m_num_movable_atoms = 20
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.08337
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 8  || par.mc.ssd_par.bfgs_steps[ligand_count] = 16
+
+Elapsed time for kernel_monte-GPU calculation: 0.524903 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank23 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -4.6      0.000      0.000
+   2         -4.5      1.944      2.023
+   3         -4.4      1.817      6.222
+   4         -4.3      2.296      2.745
+   5         -4.3      1.803      2.035
+   6         -4.3      2.065      5.831
+   7         -4.2      1.549      1.914
+   8         -4.2      1.464      6.691
+   9         -4.1      1.384      6.840
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank23 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.937 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank24_out.pdbqt
+Reading input ... reading time: 0.008811
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 1859710971 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.180484
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010201 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank24.pdbqt] , the Atom size is: [10] , the torsion_sizes is : [5] 
+m_ptr->ligand.pairs.num_pairs = 8
+m_ptr->ligand.pairs.num_pairs = 8
+m_ptr->ligand.rigid.num_children [num_torsion] = 5
+m_ptr->m_num_movable_atoms = 10
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083447
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 1  || par.mc.ssd_par.bfgs_steps[ligand_count] = 13
+
+Elapsed time for kernel_monte-GPU calculation: 0.088387 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank24 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -3.8      0.000      0.000
+   2         -3.7      2.266      2.981
+   3         -3.7      1.858      4.226
+   4         -3.7      2.284      2.878
+   5         -3.7      2.872      4.346
+   6         -3.6      3.227      4.407
+   7         -3.6      2.358      4.929
+   8         -3.5      3.797      6.058
+   9         -3.5      2.772      4.207
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank24 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.496 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank25_out.pdbqt
+Reading input ... reading time: 0.005788
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -618808610 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.18181
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.009373 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank25.pdbqt] , the Atom size is: [32] , the torsion_sizes is : [9] 
+m_ptr->ligand.pairs.num_pairs = 147
+m_ptr->ligand.pairs.num_pairs = 147
+m_ptr->ligand.rigid.num_children [num_torsion] = 9
+m_ptr->m_num_movable_atoms = 32
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083345
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 13  || par.mc.ssd_par.bfgs_steps[ligand_count] = 20
+
+Elapsed time for kernel_monte-GPU calculation: 0.579618 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank25 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.3      0.000      0.000
+   2         -6.0      6.956      9.505
+   3         -6.0      2.707      5.452
+   4         -6.0      2.794      4.459
+   5         -6.0      1.604      1.852
+   6         -6.0      1.278      1.465
+   7         -5.9      2.144      2.606
+   8         -5.8      1.734      2.353
+   9         -5.8      1.464      1.771
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank25 output...done.
+
+AutoDockVina-GPU3 total runtime = 1.017 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank26_out.pdbqt
+Reading input ... reading time: 0.008529
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 1200654888 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.181135
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.009308 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank26.pdbqt] , the Atom size is: [20] , the torsion_sizes is : [10] 
+m_ptr->ligand.pairs.num_pairs = 53
+m_ptr->ligand.pairs.num_pairs = 53
+m_ptr->ligand.rigid.num_children [num_torsion] = 10
+m_ptr->m_num_movable_atoms = 20
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083314
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 8  || par.mc.ssd_par.bfgs_steps[ligand_count] = 16
+
+Elapsed time for kernel_monte-GPU calculation: 0.450681 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank26 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.0      0.000      0.000
+   2         -4.8      4.476      7.535
+   3         -4.8      4.433      7.896
+   4         -4.8      3.500      5.827
+   5         -4.8      3.468      6.953
+   6         -4.8      4.272      7.472
+   7         -4.7      3.952      7.230
+   8         -4.6      2.730      6.163
+   9         -4.6      3.807      5.688
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank26 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.864 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank27_out.pdbqt
+Reading input ... reading time: 0.00932
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -423020801 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.181363
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.009289 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank27.pdbqt] , the Atom size is: [14] , the torsion_sizes is : [6] 
+m_ptr->ligand.pairs.num_pairs = 16
+m_ptr->ligand.pairs.num_pairs = 16
+m_ptr->ligand.rigid.num_children [num_torsion] = 6
+m_ptr->m_num_movable_atoms = 14
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083334
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 3  || par.mc.ssd_par.bfgs_steps[ligand_count] = 14
+
+Elapsed time for kernel_monte-GPU calculation: 0.188475 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank27 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -4.2      0.000      0.000
+   2         -4.1      1.988      2.216
+   3         -4.1      2.635      2.994
+   4         -4.0      2.069      4.880
+   5         -3.9      3.430      5.125
+   6         -3.9      3.506      5.148
+   7         -3.9      2.527      4.990
+   8         -3.8      2.800      5.518
+   9         -3.8      2.763      3.297
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank27 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.601 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank28_out.pdbqt
+Reading input ... reading time: 0.007111
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 538583574 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.181746
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010152 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank28.pdbqt] , the Atom size is: [27] , the torsion_sizes is : [13] 
+m_ptr->ligand.pairs.num_pairs = 123
+m_ptr->ligand.pairs.num_pairs = 123
+m_ptr->ligand.rigid.num_children [num_torsion] = 13
+m_ptr->m_num_movable_atoms = 27
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083312
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 13  || par.mc.ssd_par.bfgs_steps[ligand_count] = 19
+Perform docking|=======                              |
+Elapsed time for kernel_monte-GPU calculation: 1.077321 s 
+Perform docking| =======                             |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank28 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -4.8      0.000      0.000
+   2         -4.8      2.551      6.553
+   3         -4.8      2.197      7.052
+   4         -4.7      2.781      5.945
+   5         -4.6      1.905      7.035
+   6         -4.6      3.089      4.201
+   7         -4.5      2.005      6.668
+   8         -4.5      5.786      7.901
+   9         -4.4      4.375      7.547
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank28 output...done.
+
+AutoDockVina-GPU3 total runtime = 1.513 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank29_out.pdbqt
+Reading input ... reading time: 0.009539
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: 710607268 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.180654
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010265 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank29.pdbqt] , the Atom size is: [8] , the torsion_sizes is : [3] 
+m_ptr->ligand.pairs.num_pairs = 0
+m_ptr->ligand.pairs.num_pairs = 0
+m_ptr->ligand.rigid.num_children [num_torsion] = 3
+m_ptr->m_num_movable_atoms = 8
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.082316
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 1  || par.mc.ssd_par.bfgs_steps[ligand_count] = 12
+
+Elapsed time for kernel_monte-GPU calculation: 0.078557 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank29 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -3.3      0.000      0.000
+   2         -3.2      2.808      3.121
+   3         -3.2      2.329      2.622
+   4         -3.2      2.642      2.821
+   5         -3.1      2.349      2.573
+   6         -3.0      1.660      2.032
+   7         -3.0      2.280      2.877
+   8         -3.0      2.540      2.901
+   9         -3.0      2.289      2.760
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank29 output...done.
+
+AutoDockVina-GPU3 total runtime = 0.481 s
+Using single ligand docking mode
+
+Output will be /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank30_out.pdbqt
+Reading input ... reading time: 0.006665
+done.
+Setting up the scoring function ... done.
+Using heuristic search_depth
+Analyzing the binding site ... done.
+Device name: NVIDIA GeForce RTX 3090
+Compute capability: 8.6
+The maxThreadsPerBlock is : 1024
+
+Using random seed: -1775270336 , Search depth is set to:0.000000 
+time of memcpy for kernel_grid: 0.181313
+<<Call to kernel_grid function>> 
+
+
+Elapsed time for kernel_grid-GPU calculation: 0.010264 s 
+
+Docking ligand: name: [/mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank30.pdbqt] , the Atom size is: [31] , the torsion_sizes is : [8] 
+m_ptr->ligand.pairs.num_pairs = 252
+m_ptr->ligand.pairs.num_pairs = 252
+m_ptr->ligand.rigid.num_children [num_torsion] = 8
+m_ptr->m_num_movable_atoms = 31
+the ric_gpus[ligand_count] memory size = 1867776
+the m_gpus[ligand_count] memory size =  318930944
+time of memcpy for kernel monte carlo: 0.083344
+<<Call to kernel_monte function>> 
+par.mc.search_depth[ligand_count] = 12  || par.mc.ssd_par.bfgs_steps[ligand_count] = 20
+
+Elapsed time for kernel_monte-GPU calculation: 0.652834 s 
+Perform docking|=======                              |Perform docking|================done=================|
+
+Refining ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank30 results...done.
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.1      0.000      0.000
+   2         -6.0      3.840      6.210
+   3         -5.9      2.011      3.273
+   4         -5.9      0.988      1.199
+   5         -5.8      0.993      1.102
+   6         -5.7      3.958      9.946
+   7         -5.7      1.292      1.565
+   8         -5.6      4.136      6.589
+   9         -5.4      2.633      3.640
+Writing ligand /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/auto_test/test/drugbank30 output...done.
+
+AutoDockVina-GPU3 total runtime = 1.094 s

@@ -1,0 +1,10 @@
+center_x = 2.865
+center_y = 30.924
+center_z = 17.484
+size_x = 50
+size_y = 26.25
+size_z = 22.5
+receptor = ./input_file_example/2er7_protein.pdbqt
+
+ligand = /mnt/disk4/DingXiaoyu/AutoDock-Vina-GPU-2-1-CUDA-V5-LCF/input_file_example/1h23_5.pdbqt
+thread = 8192

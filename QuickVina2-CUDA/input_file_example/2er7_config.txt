@@ -1,0 +1,13 @@
+center_x = 2.865
+center_y = 30.924
+center_z = 17.484
+
+size_x = 50
+size_y = 26.25
+size_z = 22.5
+
+receptor = ./input_file_example/2er7_protein.pdbqt
+ligand = ./input_file_example/2er7_ligand.pdbqt
+out = ./docking_result/2er7_docking_result.pdbqt
+
+thread = 8192

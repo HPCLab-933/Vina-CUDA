@@ -1,13 +1,13 @@
 # Vina-CUDA
 ## Introduction
 In this project, we propose **Vina-CUDA** based on [Vina-GPU 2.1](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1), which aims to further enhance Vina-GPU 2.1's docking speed by optimizing its core algorithms through deep utilization of GPU hardware features, thereby reducing the cost of virtual screening and increasing the efficiency of drug design. 
-![Vina-CUDA](./image/Vina-CUDA.jpg)
+![Vina-CUDA](./image/Vina-CUDA.png)
 
 ## The Acceleration and Accuracy of Vina-CUDA
 * The runtime acceleration of Vina-CUDA comprae with the Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W-GPU 2.1 in Autodock-GPU, CASF-2016, PPARG, Astex, and PoseBuster librarys.
 ![Vina-CUDA](./image/docking_runtime_for_program_update.png)
 * Accuracy comparison of Vina-CUDA on AutoDock-GPU library.
-![Vina-CUDA](./image/Autodck-GPU-RSMD-SCORE-Result.jpg)
+![Vina-CUDA](./image/Autodck-GPU-RSMD-SCORE-Result.png)
  ## Compiling and Running Methods
  ### Linux
  **Note**: At least 8M stack size is needed. To change the stack size, use `ulimit -s 8192`.

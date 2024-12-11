@@ -1,0 +1,369 @@
+MODEL 1
+REMARK VINA RESULT:      -4.1      0.000      0.000
+REMARK  Name = 6992086
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_4  and  CA_6
+REMARK    2  A    between atoms: CA_6  and  CB_7
+REMARK    3  A    between atoms: CA_6  and  C_9
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CG_8  and  CD_10
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  GLN A   1     -26.580 -32.312  18.200  0.00  0.00    +0.108 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   GLN A   1     -25.866 -31.052  18.585  0.00  0.00    +0.225 N 
+ATOM      3  H1  GLN A   1     -26.062 -30.287  17.926  0.00  0.00    +0.200 HD
+ATOM      4  H2  GLN A   1     -26.140 -30.732  19.524  0.00  0.00    +0.200 HD
+ATOM      5  H3  GLN A   1     -24.847 -31.194  18.599  0.00  0.00    +0.200 HD
+ENDBRANCH   1   2
+BRANCH   1   7
+ATOM      6  O   GLN A   1     -28.262 -31.441  19.640  0.00  0.00    -0.544 OA
+ATOM      7  C   GLN A   1     -27.965 -32.390  18.862  0.00  0.00    +0.089 C 
+ATOM      8  OXT GLN A   1     -28.635 -33.417  18.554  0.00  0.00    -0.544 OA
+ENDBRANCH   1   7
+BRANCH   1   9
+ATOM      9  CB  GLN A   1     -25.645 -33.475  18.546  0.00  0.00    +0.070 C 
+BRANCH   9  10
+ATOM     10  CG  GLN A   1     -24.258 -33.306  17.923  0.00  0.00    +0.101 C 
+BRANCH  10  11
+ATOM     11  CD  GLN A   1     -23.159 -33.874  18.800  0.00  0.00    +0.211 C 
+ATOM     12  NE2 GLN A   1     -22.442 -34.866  18.166  0.00  0.00    -0.329 N 
+ATOM     13 HE21 GLN A   1     -22.650 -35.164  17.218  0.00  0.00    +0.145 HD
+ATOM     14 HE22 GLN A   1     -21.674 -35.335  18.633  0.00  0.00    +0.145 HD
+ATOM     15  OE1 GLN A   1     -22.930 -33.492  19.944  0.00  0.00    -0.276 OA
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 5
+ENDMDL
+MODEL 2
+REMARK VINA RESULT:      -4.1      2.501      2.996
+REMARK  Name = 6992086
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_4  and  CA_6
+REMARK    2  A    between atoms: CA_6  and  CB_7
+REMARK    3  A    between atoms: CA_6  and  C_9
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CG_8  and  CD_10
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  GLN A   1     -28.338 -31.692  19.013  0.00  0.00    +0.108 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   GLN A   1     -29.806 -31.981  19.080  0.00  0.00    +0.225 N 
+ATOM      3  H1  GLN A   1     -30.014 -32.956  18.820  0.00  0.00    +0.200 HD
+ATOM      4  H2  GLN A   1     -30.182 -31.824  20.025  0.00  0.00    +0.200 HD
+ATOM      5  H3  GLN A   1     -30.333 -31.373  18.439  0.00  0.00    +0.200 HD
+ENDBRANCH   1   2
+BRANCH   1   7
+ATOM      6  O   GLN A   1     -28.871 -29.718  20.229  0.00  0.00    -0.544 OA
+ATOM      7  C   GLN A   1     -28.035 -30.249  19.446  0.00  0.00    +0.089 C 
+ATOM      8  OXT GLN A   1     -26.982 -29.761  18.943  0.00  0.00    -0.544 OA
+ENDBRANCH   1   7
+BRANCH   1   9
+ATOM      9  CB  GLN A   1     -27.882 -32.037  17.592  0.00  0.00    +0.070 C 
+BRANCH   9  10
+ATOM     10  CG  GLN A   1     -27.153 -33.381  17.529  0.00  0.00    +0.101 C 
+BRANCH  10  11
+ATOM     11  CD  GLN A   1     -25.850 -33.367  18.304  0.00  0.00    +0.211 C 
+ATOM     12  NE2 GLN A   1     -25.687 -34.498  19.075  0.00  0.00    -0.329 N 
+ATOM     13 HE21 GLN A   1     -26.378 -35.241  19.103  0.00  0.00    +0.145 HD
+ATOM     14 HE22 GLN A   1     -24.859 -34.625  19.647  0.00  0.00    +0.145 HD
+ATOM     15  OE1 GLN A   1     -25.030 -32.454  18.251  0.00  0.00    -0.276 OA
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 5
+ENDMDL
+MODEL 3
+REMARK VINA RESULT:      -4.1      3.677      4.980
+REMARK  Name = 6992086
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_4  and  CA_6
+REMARK    2  A    between atoms: CA_6  and  CB_7
+REMARK    3  A    between atoms: CA_6  and  C_9
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CG_8  and  CD_10
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  GLN A   1     -23.070 -33.455  17.392  0.00  0.00    +0.108 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   GLN A   1     -24.159 -32.489  17.749  0.00  0.00    +0.225 N 
+ATOM      3  H1  GLN A   1     -24.897 -32.939  18.308  0.00  0.00    +0.200 HD
+ATOM      4  H2  GLN A   1     -23.798 -31.694  18.294  0.00  0.00    +0.200 HD
+ATOM      5  H3  GLN A   1     -24.603 -32.104  16.906  0.00  0.00    +0.200 HD
+ENDBRANCH   1   2
+BRANCH   1   7
+ATOM      6  O   GLN A   1     -21.746 -35.127  18.446  0.00  0.00    -0.544 OA
+ATOM      7  C   GLN A   1     -22.488 -34.125  18.647  0.00  0.00    +0.089 C 
+ATOM      8  OXT GLN A   1     -22.844 -33.594  19.738  0.00  0.00    -0.544 OA
+ENDBRANCH   1   7
+BRANCH   1   9
+ATOM      9  CB  GLN A   1     -22.048 -32.679  16.556  0.00  0.00    +0.070 C 
+BRANCH   9  10
+ATOM     10  CG  GLN A   1     -21.643 -33.437  15.290  0.00  0.00    +0.101 C 
+BRANCH  10  11
+ATOM     11  CD  GLN A   1     -20.192 -33.877  15.321  0.00  0.00    +0.211 C 
+ATOM     12  NE2 GLN A   1     -20.029 -35.102  15.933  0.00  0.00    -0.329 N 
+ATOM     13 HE21 GLN A   1     -20.811 -35.627  16.313  0.00  0.00    +0.145 HD
+ATOM     14 HE22 GLN A   1     -19.111 -35.522  16.024  0.00  0.00    +0.145 HD
+ATOM     15  OE1 GLN A   1     -19.266 -33.221  14.852  0.00  0.00    -0.276 OA
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 5
+ENDMDL
+MODEL 4
+REMARK VINA RESULT:      -4.0      2.459      5.085
+REMARK  Name = 6992086
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_4  and  CA_6
+REMARK    2  A    between atoms: CA_6  and  CB_7
+REMARK    3  A    between atoms: CA_6  and  C_9
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CG_8  and  CD_10
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  GLN A   1     -22.220 -33.168  16.886  0.00  0.00    +0.108 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   GLN A   1     -21.353 -32.773  15.729  0.00  0.00    +0.225 N 
+ATOM      3  H1  GLN A   1     -20.382 -33.088  15.857  0.00  0.00    +0.200 HD
+ATOM      4  H2  GLN A   1     -21.695 -33.173  14.844  0.00  0.00    +0.200 HD
+ATOM      5  H3  GLN A   1     -21.333 -31.751  15.613  0.00  0.00    +0.200 HD
+ENDBRANCH   1   2
+BRANCH   1   7
+ATOM      6  O   GLN A   1     -22.124 -34.545  18.824  0.00  0.00    -0.544 OA
+ATOM      7  C   GLN A   1     -21.443 -34.031  17.893  0.00  0.00    +0.089 C 
+ATOM      8  OXT GLN A   1     -20.201 -34.106  17.670  0.00  0.00    -0.544 OA
+ENDBRANCH   1   7
+BRANCH   1   9
+ATOM      9  CB  GLN A   1     -23.463 -33.844  16.298  0.00  0.00    +0.070 C 
+BRANCH   9  10
+ATOM     10  CG  GLN A   1     -24.712 -32.971  16.431  0.00  0.00    +0.101 C 
+BRANCH  10  11
+ATOM     11  CD  GLN A   1     -25.233 -32.925  17.854  0.00  0.00    +0.211 C 
+ATOM     12  NE2 GLN A   1     -25.229 -34.166  18.455  0.00  0.00    -0.329 N 
+ATOM     13 HE21 GLN A   1     -24.908 -35.001  17.974  0.00  0.00    +0.145 HD
+ATOM     14 HE22 GLN A   1     -25.550 -34.285  19.409  0.00  0.00    +0.145 HD
+ATOM     15  OE1 GLN A   1     -25.614 -31.900  18.412  0.00  0.00    -0.276 OA
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 5
+ENDMDL
+MODEL 5
+REMARK VINA RESULT:      -3.9      2.374      3.016
+REMARK  Name = 6992086
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_4  and  CA_6
+REMARK    2  A    between atoms: CA_6  and  CB_7
+REMARK    3  A    between atoms: CA_6  and  C_9
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CG_8  and  CD_10
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  GLN A   1     -28.409 -31.693  19.321  0.00  0.00    +0.108 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   GLN A   1     -29.864 -31.932  19.052  0.00  0.00    +0.225 N 
+ATOM      3  H1  GLN A   1     -30.433 -31.801  19.900  0.00  0.00    +0.200 HD
+ATOM      4  H2  GLN A   1     -30.227 -31.293  18.332  0.00  0.00    +0.200 HD
+ATOM      5  H3  GLN A   1     -30.026 -32.891  18.717  0.00  0.00    +0.200 HD
+ENDBRANCH   1   2
+BRANCH   1   7
+ATOM      6  O   GLN A   1     -27.065 -29.757  18.994  0.00  0.00    -0.544 OA
+ATOM      7  C   GLN A   1     -28.121 -30.197  19.528  0.00  0.00    +0.089 C 
+ATOM      8  OXT GLN A   1     -28.980 -29.590  20.231  0.00  0.00    -0.544 OA
+ENDBRANCH   1   7
+BRANCH   1   9
+ATOM      9  CB  GLN A   1     -27.634 -32.335  18.167  0.00  0.00    +0.070 C 
+BRANCH   9  10
+ATOM     10  CG  GLN A   1     -26.606 -33.356  18.658  0.00  0.00    +0.101 C 
+BRANCH  10  11
+ATOM     11  CD  GLN A   1     -25.282 -33.237  17.930  0.00  0.00    +0.211 C 
+ATOM     12  NE2 GLN A   1     -24.633 -32.053  18.212  0.00  0.00    -0.329 N 
+ATOM     13 HE21 GLN A   1     -25.023 -31.357  18.840  0.00  0.00    +0.145 HD
+ATOM     14 HE22 GLN A   1     -23.734 -31.839  17.796  0.00  0.00    +0.145 HD
+ATOM     15  OE1 GLN A   1     -24.833 -34.096  17.176  0.00  0.00    -0.276 OA
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 5
+ENDMDL
+MODEL 6
+REMARK VINA RESULT:      -3.9      2.417      4.686
+REMARK  Name = 6992086
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_4  and  CA_6
+REMARK    2  A    between atoms: CA_6  and  CB_7
+REMARK    3  A    between atoms: CA_6  and  C_9
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CG_8  and  CD_10
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  GLN A   1     -25.523 -33.763  17.708  0.00  0.00    +0.108 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   GLN A   1     -25.608 -34.516  19.001  0.00  0.00    +0.225 N 
+ATOM      3  H1  GLN A   1     -26.566 -34.840  19.190  0.00  0.00    +0.200 HD
+ATOM      4  H2  GLN A   1     -24.994 -35.342  19.000  0.00  0.00    +0.200 HD
+ATOM      5  H3  GLN A   1     -25.320 -33.925  19.793  0.00  0.00    +0.200 HD
+ENDBRANCH   1   2
+BRANCH   1   7
+ATOM      6  O   GLN A   1     -23.220 -34.330  17.513  0.00  0.00    -0.544 OA
+ATOM      7  C   GLN A   1     -24.308 -34.213  16.882  0.00  0.00    +0.089 C 
+ATOM      8  OXT GLN A   1     -24.548 -34.395  15.654  0.00  0.00    -0.544 OA
+ENDBRANCH   1   7
+BRANCH   1   9
+ATOM      9  CB  GLN A   1     -25.533 -32.272  18.062  0.00  0.00    +0.070 C 
+BRANCH   9  10
+ATOM     10  CG  GLN A   1     -26.877 -31.613  17.750  0.00  0.00    +0.101 C 
+BRANCH  10  11
+ATOM     11  CD  GLN A   1     -27.420 -30.825  18.925  0.00  0.00    +0.211 C 
+ATOM     12  NE2 GLN A   1     -28.156 -31.609  19.787  0.00  0.00    -0.329 N 
+ATOM     13 HE21 GLN A   1     -28.304 -32.600  19.627  0.00  0.00    +0.145 HD
+ATOM     14 HE22 GLN A   1     -28.579 -31.214  20.620  0.00  0.00    +0.145 HD
+ATOM     15  OE1 GLN A   1     -27.224 -29.624  19.095  0.00  0.00    -0.276 OA
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 5
+ENDMDL
+MODEL 7
+REMARK VINA RESULT:      -3.9      2.877      5.779
+REMARK  Name = 6992086
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_4  and  CA_6
+REMARK    2  A    between atoms: CA_6  and  CB_7
+REMARK    3  A    between atoms: CA_6  and  C_9
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CG_8  and  CD_10
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  GLN A   1     -21.673 -34.273  17.081  0.00  0.00    +0.108 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   GLN A   1     -21.843 -35.033  18.361  0.00  0.00    +0.225 N 
+ATOM      3  H1  GLN A   1     -21.323 -35.921  18.347  0.00  0.00    +0.200 HD
+ATOM      4  H2  GLN A   1     -21.511 -34.491  19.171  0.00  0.00    +0.200 HD
+ATOM      5  H3  GLN A   1     -22.832 -35.257  18.531  0.00  0.00    +0.200 HD
+ENDBRANCH   1   2
+BRANCH   1   7
+ATOM      6  O   GLN A   1     -19.388 -34.226  17.741  0.00  0.00    -0.544 OA
+ATOM      7  C   GLN A   1     -20.232 -33.763  16.923  0.00  0.00    +0.089 C 
+ATOM      8  OXT GLN A   1     -20.073 -32.921  15.994  0.00  0.00    -0.544 OA
+ENDBRANCH   1   7
+BRANCH   1   9
+ATOM      9  CB  GLN A   1     -22.740 -33.174  17.074  0.00  0.00    +0.070 C 
+BRANCH   9  10
+ATOM     10  CG  GLN A   1     -23.422 -33.021  18.435  0.00  0.00    +0.101 C 
+BRANCH  10  11
+ATOM     11  CD  GLN A   1     -24.933 -33.094  18.334  0.00  0.00    +0.211 C 
+ATOM     12  NE2 GLN A   1     -25.400 -34.390  18.386  0.00  0.00    -0.329 N 
+ATOM     13 HE21 GLN A   1     -24.779 -35.187  18.481  0.00  0.00    +0.145 HD
+ATOM     14 HE22 GLN A   1     -26.393 -34.589  18.332  0.00  0.00    +0.145 HD
+ATOM     15  OE1 GLN A   1     -25.660 -32.111  18.221  0.00  0.00    -0.276 OA
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 5
+ENDMDL
+MODEL 8
+REMARK VINA RESULT:      -3.9      2.988      5.795
+REMARK  Name = 6992086
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_4  and  CA_6
+REMARK    2  A    between atoms: CA_6  and  CB_7
+REMARK    3  A    between atoms: CA_6  and  C_9
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CG_8  and  CD_10
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  GLN A   1     -21.748 -33.829  16.965  0.00  0.00    +0.108 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   GLN A   1     -22.406 -34.190  15.669  0.00  0.00    +0.225 N 
+ATOM      3  H1  GLN A   1     -22.756 -33.358  15.175  0.00  0.00    +0.200 HD
+ATOM      4  H2  GLN A   1     -21.757 -34.677  15.036  0.00  0.00    +0.200 HD
+ATOM      5  H3  GLN A   1     -23.207 -34.817  15.822  0.00  0.00    +0.200 HD
+ENDBRANCH   1   2
+BRANCH   1   7
+ATOM      6  O   GLN A   1     -19.806 -34.998  17.689  0.00  0.00    -0.544 OA
+ATOM      7  C   GLN A   1     -20.235 -34.098  16.914  0.00  0.00    +0.089 C 
+ATOM      8  OXT GLN A   1     -19.599 -33.363  16.106  0.00  0.00    -0.544 OA
+ENDBRANCH   1   7
+BRANCH   1   9
+ATOM      9  CB  GLN A   1     -22.491 -34.591  18.067  0.00  0.00    +0.070 C 
+BRANCH   9  10
+ATOM     10  CG  GLN A   1     -23.272 -33.655  18.991  0.00  0.00    +0.101 C 
+BRANCH  10  11
+ATOM     11  CD  GLN A   1     -24.714 -33.487  18.555  0.00  0.00    +0.211 C 
+ATOM     12  NE2 GLN A   1     -25.504 -34.553  18.930  0.00  0.00    -0.329 N 
+ATOM     13 HE21 GLN A   1     -25.133 -35.349  19.440  0.00  0.00    +0.145 HD
+ATOM     14 HE22 GLN A   1     -26.492 -34.575  18.707  0.00  0.00    +0.145 HD
+ATOM     15  OE1 GLN A   1     -25.136 -32.511  17.939  0.00  0.00    -0.276 OA
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 5
+ENDMDL
+MODEL 9
+REMARK VINA RESULT:      -3.8      2.498      5.232
+REMARK  Name = 6992086
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_4  and  CA_6
+REMARK    2  A    between atoms: CA_6  and  CB_7
+REMARK    3  A    between atoms: CA_6  and  C_9
+REMARK    4  A    between atoms: CB_7  and  CG_8
+REMARK    5  A    between atoms: CG_8  and  CD_10
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CA  GLN A   1     -22.510 -33.217  17.525  0.00  0.00    +0.108 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   GLN A   1     -22.187 -32.273  16.407  0.00  0.00    +0.225 N 
+ATOM      3  H1  GLN A   1     -23.028 -31.794  16.059  0.00  0.00    +0.200 HD
+ATOM      4  H2  GLN A   1     -21.516 -31.550  16.703  0.00  0.00    +0.200 HD
+ATOM      5  H3  GLN A   1     -21.765 -32.771  15.612  0.00  0.00    +0.200 HD
+ENDBRANCH   1   2
+BRANCH   1   7
+ATOM      6  O   GLN A   1     -21.642 -35.183  18.547  0.00  0.00    -0.544 OA
+ATOM      7  C   GLN A   1     -21.479 -34.354  17.609  0.00  0.00    +0.089 C 
+ATOM      8  OXT GLN A   1     -20.574 -34.306  16.727  0.00  0.00    -0.544 OA
+ENDBRANCH   1   7
+BRANCH   1   9
+ATOM      9  CB  GLN A   1     -23.953 -33.684  17.307  0.00  0.00    +0.070 C 
+BRANCH   9  10
+ATOM     10  CG  GLN A   1     -24.768 -33.666  18.601  0.00  0.00    +0.101 C 
+BRANCH  10  11
+ATOM     11  CD  GLN A   1     -26.223 -34.024  18.371  0.00  0.00    +0.211 C 
+ATOM     12  NE2 GLN A   1     -27.012 -33.741  19.465  0.00  0.00    -0.329 N 
+ATOM     13 HE21 GLN A   1     -26.634 -33.339  20.318  0.00  0.00    +0.145 HD
+ATOM     14 HE22 GLN A   1     -28.009 -33.927  19.452  0.00  0.00    +0.145 HD
+ATOM     15  OE1 GLN A   1     -26.653 -34.508  17.327  0.00  0.00    -0.276 OA
+ENDBRANCH  10  11
+ENDBRANCH   9  10
+ENDBRANCH   1   9
+TORSDOF 5
+ENDMDL
