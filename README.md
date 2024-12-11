@@ -1,10 +1,10 @@
 # Vina-CUDA
 ## Introduction
-In this project, we propose **Vina-CUDA** based on [Vina-GPU 2.1](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1), which aims to further enhance Vina-GPU 2.1's docking speed by optimizing its core algorithms through deep utilization of GPU hardware features, thereby reducing the cost of virtual screening and increasing the efficiency of drug design. 
+In this project, we propose **Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA** based on [Vina-GPU 2.1, QuickVina2-GPU 2.1, and QuickVina-W-GPU 2.1](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1), which aims to further enhance Vina-GPU 2.1 and its variants docking speed by optimizing its core algorithms through deep utilization of GPU hardware features, thereby reducing the cost of virtual screening and increasing the efficiency of drug design. 
 ![Vina-CUDA](./image/Vina-CUDA.png)
 
 ## The Acceleration and Accuracy of Vina-CUDA
-* The runtime acceleration of Vina-CUDA comprae with the Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W-GPU 2.1 in Autodock-GPU, CASF-2016, PPARG, Astex, and PoseBuster librarys.
+* The runtime acceleration of Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA comprae with the Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W-GPU 2.1 in Autodock-GPU, CASF-2016, PPARG, Astex, and PoseBuster librarys.
 ![Vina-CUDA](./image/docking_runtime_for_program_update.png)
 * Accuracy comparison of Vina-CUDA on AutoDock-GPU library.
 ![Vina-CUDA](./image/Autodck-GPU-RSMD-SCORE-Result.png)
@@ -13,7 +13,7 @@ In this project, we propose **Vina-CUDA** based on [Vina-GPU 2.1](https://github
  **Note**: At least 8M stack size is needed. To change the stack size, use `ulimit -s 8192`.
  1. install [boost library](https://www.boost.org/) (Current Version is 1.77.0)
  2. install [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads) (Current Version: v12.2)   **Note**: CUDA library can be usually in `/usr/local/cuda` for NVIDIA GPU cards.
- 3. Open the Makefile file and change the following information: 
+ 3. cd Vina-CUDA folder, open the Makefile file and change the following information: 
        1. `$WORK_DIR` : Set as your working directory (eg: path/of/your/work/directory/Vina-CUDA);
        2. `$BOOST_LIB_PATH` : Set to the path where the BOOST library is located (eg: path/of/BOOST/boost_1_77_0);
        3. `$NVCC_COMPILER` : Set to the path of the NVCC compiler (eg: /usr/local/cuda-12.2/bin/nvcc).
@@ -21,7 +21,8 @@ In this project, we propose **Vina-CUDA** based on [Vina-GPU 2.1](https://github
  5. After a successful compiling (there may be some warnings about the BOOST library, which can usually be ignored without affecting the normal operation of the programme), you will see the `$(Vina-GPU-2-1-CUDA)` in the work directory.
  6. In the work directory,type `$(Vina-GPU-2-1-CUDA) --config ./input_file_example/1u1b_config.txt` to run the Vina-CUDA method.
  7. once you successfully run `$(VINA_CUDA_METHODS)`, its runtime can be further reduced by typing `make clean` and `make` to build it without compiling kernel files.
- 8. other compile options:
+ 8. QuickVina2-CUDA and QuickVina-W-CUDA are compiled and run in the same way as Vina-CUDA.
+ 9. other compile options:
 
 |Options| Description|
 |--|--|
