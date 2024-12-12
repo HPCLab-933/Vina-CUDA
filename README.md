@@ -11,21 +11,24 @@ In this project, we propose **Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA**
  ## Compiling and Running Methods
  ### Linux
  **Note**: At least 8M stack size is needed. To change the stack size, use `ulimit -s 8192`.
- #### Common configuration
+ #### 1.Common configuration
  1. install [boost library](https://www.boost.org/) (Current Version is 1.77.0)
  2. install [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads) (Current Version: v12.2)   **Note**: CUDA library can be usually in `/usr/local/cuda` for NVIDIA GPU cards.
+ 3. install [GCC](https://gcc.gnu.org/)(Current Version is gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0)
+ 4. install [python3](https://www.python.org/downloads/) (for runing the Multi_GPU_docking.py)
 
- #### Vina-CUDA Compilation and Running
- 4. cd Vina-CUDA folder, open the Makefile file and change the following information: 
+ #### 2.Vina-CUDA，QuickVina2-CUDA, and QuickVina-W-CUDA Compilation and Running
+ 1. cd Vina-CUDA/QuickVina2-CUDA/QuickVina-W-CUDA folder, open the corresponding Makefile file and change the following information: 
        1. `$WORK_DIR` : Set as your working directory (eg: path/of/your/work/directory/Vina-CUDA);
        2. `$BOOST_LIB_PATH` : Set to the path where the BOOST library is located (eg: path/of/BOOST/boost_1_77_0);
        3. `$NVCC_COMPILER` : Set to the path of the NVCC compiler (eg: /usr/local/cuda-12.2/bin/nvcc).
- 5. Save the Makefile and type `make clean` and `make source -jthread` to build `$(VINA_CUDA_METHODS)` that compile the kernel files on the fly (this would take some time at the first use).
- 6. After a successful compiling (there may be some warnings about the BOOST library, which can usually be ignored without affecting the normal operation of the programme), you will see the `$(Vina-GPU-2-1-CUDA)` in the work directory.
- 7. In the work directory,type `$(Vina-GPU-2-1-CUDA) --config ./input_file_example/1u1b_config.txt` to run the Vina-CUDA method.
- 8. once you successfully run `$(VINA_CUDA_METHODS)`, its runtime can be further reduced by typing `make clean` and `make` to build it without compiling kernel files.
- 9. QuickVina2-CUDA and QuickVina-W-CUDA are compiled and run in the same way as Vina-CUDA.
- 10. other compile options:
+       4. `$GRID_DIM`: Set to the size of kernel grid, eg.,-DGRID_DIM1=64, -DGRID_DIM2=128. (**Note**: `GRID_DIM1*GRID_DIM2` must be equal to the value of `thread` in the run command)
+       5. `$DOCKING_BOX_SIZE`: Set to the `-DSAMLL_BOX` or `-DLARGE_BOX`. (**Note**: Please select the appropriate docking box according to the GPU memory size, otherwise an insufficient memory error may occur when the thread value is large.)
+ 2. Save the Makefile and type `make clean` and `make source -jthread` to build `$(VINA_CUDA_METHODS)`/`$(QuickVina2-CUDA_METHODS)`/`$(QuickVina-W-CUDA_METHODS)` that compile the kernel files on the fly (this would take some time at the first use).
+ 3. After a successful compiling (there may be some warnings about the BOOST library, which can usually be ignored without affecting the normal operation of the programme), you will see the `$(Vina-GPU-2-1-CUDA)`/ `$(QuickVina2-GPU-2-1-CUDA)`/`$(Vina-GPU-2-1-W-CUDA)` in the work directory.
+ 4. In the work directory,type `$(Vina-GPU-2-1-CUDA)`/ `$(QuickVina2-GPU-2-1-CUDA)`/`$(Vina-GPU-2-1-W-CUDA) --config ./input_file_example/1u1b_config.txt` to run the Vina-CUDA method. (**Note**: the default value of thread is 8192 for Vina-CUDA and QuickVina2-CUDA, QuickVina-W-CUDA is 6500)
+ 5. once you successfully run `$(VINA_CUDA_METHODS)`/`$(QuickVina2-CUDA_METHODS)`/`$(QuickVina-W-CUDA_METHODS)`, its runtime can be further reduced by typing `make clean` and `make` to build it without compiling kernel files.
+ 6. other compile options:
 
 |Options| Description|
 |--|--|
@@ -38,6 +41,11 @@ In this project, we propose **Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA**
 
 ### Windows
 The usage on the Windows platform can be referenced from the Vina-GPU 2.1 [documentation](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1?tab=readme-ov-file#windows) .
+
+## Multi_GPU_docking
+1. cd `Multi_GPU_Docking_Procedure` folder and open the `Multi_GPU_docking.py` file;
+2. Configuring the absolute path of the docking program, the small molecule library path , the protein path , the GPU_ID value, and the thread value; (**Note**: Proteins and ligands are pdbqt files that have been processed in advance.)
+3. Save the `Multi_GPU_docking.py` file and type ` python3 Multi_GPU_docking.py`. after runing, check the `output` folder.
 
 ## Usage
 |Arguments| Description|Default value
