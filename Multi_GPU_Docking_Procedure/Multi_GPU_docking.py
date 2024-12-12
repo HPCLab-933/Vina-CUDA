@@ -560,11 +560,11 @@ class VinaDocking:
 
 #You need to enter the absolute path of the docking program, the small molecule library, and the protein.
 if __name__ == "__main__":
-    docking_module_gpu = VinaDocking("./Autodock-Vina-CUDA-master/Vina-GPU-2-1-CUDA",
-                                 "./Autodock-Vina-CUDA-master/input_file_example/PPARG/5Y2T_receptor.pdbqt",
+    docking_module_gpu = VinaDocking("./Autodock-Vina-CUDA-master/Vina-GPU-2-1-CUDA",   #the Path to the executable docking program
+                                 "./Autodock-Vina-CUDA-master/input_file_example/PPARG/5Y2T_receptor.pdbqt",  # The path of receptor proteins
                                  [28.000, 3.000, 28.010],
                                  [25.0, 25.00, 25.00],
-                                 "./Autodock-Vina-CUDA-master/input_file_example/PPARG/actives_pdbqt",
+                                 "./Autodock-Vina-CUDA-master/input_file_example/PPARG/actives_pdbqt", #The path of ligand compounds
                                  keep_ligand_file=True,
                                  keep_config_file=True,
                                  keep_log_file=True,
@@ -573,6 +573,6 @@ if __name__ == "__main__":
                                  gpu_ids=None, # None means detecting all available GPU IDs and using them
                                  additional_vina_args={"thread": "8192"})
     try:                         
-        print(docking_module_gpu("./Autodock-Vina-CUDA-master/input_file_example/PPARG/actives_pdbqt"))
+        print(docking_module_gpu("./Autodock-Vina-CUDA-master/input_file_example/PPARG/actives_pdbqt")) #The path of ligand compounds
     except OutOfGPUMemoryError:
-        print(docking_module_gpu("./Autodock-Vina-CUDA-master/input_file_example/PPARG/actives_pdbqt"))
+        print(docking_module_gpu("./Autodock-Vina-CUDA-master/input_file_example/PPARG/actives_pdbqt")) #The path of ligand compounds
