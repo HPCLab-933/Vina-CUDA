@@ -64,6 +64,11 @@ The usage on the Windows platform can be referenced from the Vina-GPU 2.1 [docum
 1. Since the number of threads, the size of the docking box, and the ligand atom number are directly related to the GPU memory allocation in the program, their values should not exceed 10,000, 70×70×70, and 100, respectively.
 2. Due to the variability of random seed values, the docking score error ranges from 0.1 to 0.5 in each run (this phenomenon also occurs in Vina-GPU 2.1).
 
+## Changelog
+- 2024-10-12: Release [Vina-CUDA v1.0].
+- 2024-11-21: Upload source codes of Vina-CUDA(added source code for QuickVina-W-CUDA and QuickVina2-CUDA).
+- 2025-01-10: Release [Vina-CUDA v1.1] (added optimized BFGS optimization algorithm).
+
 ## Citation
 * Trott, Oleg, and Arthur J. Olson. "AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading." Journal of computational chemistry 31.2 (2010): 455-461.
 * Tang S, Ding J, Zhu X, et al. Vina-GPU 2.1: towards further optimizing docking speed and precision of AutoDock Vina and its derivatives[J]. IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2024.
