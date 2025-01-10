@@ -59,7 +59,7 @@ The usage on the Windows platform can be referenced from the Vina-GPU 2.1 [docum
 |--search_depth| the number of searching iterations in each docking lane| heuristically determined
 |--center_x/y/z|the center of searching box in the receptor|no default
 |--size_x/y/z|the volume of the searching box|no default 
-|--rilc_bfgs| 1 is the rilc_bfgs optimization algorithm; 0 is the bfgs optimization algorithm | default is 1
+|--rilc_bfgs| 1 is the rilc_bfgs optimization algorithm; 0 is the bfgs optimization algorithm | 1
 
 ## Limitation
 1. Since the number of threads, the size of the docking box, and the ligand atom number are directly related to the GPU memory allocation in the program, their values should not exceed 10,000, 70×70×70, and 100, respectively.
