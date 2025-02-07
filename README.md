@@ -4,8 +4,9 @@ In this project, we propose **Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA**
 ![Vina-CUDA](./image/Vina-CUDA.png)
 
 ## Case Study
+The AutoDock-GPU dataset includes diverse compounds from databases such as CASF-2013 and PDB, spanning a wide range of ligand complexities and target characteristics. It has been widely used in studies as it provides a comprehensive assessment of molecular docking program's performance and accuracy. 
 ### Environment and Parameter Configuration
-Hardware: Intel(R) Core(TM) i9-10980XE CPU @ 3.00GHz with 18 cores (36 threads). System: Ubuntu 20.04.6 LTS. GPU model: Nvidia GeForce RTX 3090 with 32GB of memory. Software: CUDA version 12.2, BOOST version 1.77.0, 192GB of RAM, and gcc version 9.4.0. The receptor was processed using the prepare\_receptor module from ADFRsuite-1.0 (http://ccsb.scripps.edu/adfr/downloads/), which removes water molecules, adds hydrogens, and assigns charges. The ligand was prepared using the mk\_prepare\_ligand.py script from Meeko (http://github.com/forlilab/Meeko), which performs hydrogen addition and charge assignment with the following command: -i ligand.sdf -o ligand.pdbqt. The receptor's docking center and box size were set to default values. Benchmark: [Autodock-GPU](https://enodo.org/records/4031961), [CASF-2016](https://www.pdbbind.org.cn/index.php), [PPARG, Astex, and PoseBuster](https://github.com/dptech-corp/Uni-Dock-Benchmarks) librarys.
+Software: CUDA version 12.2, BOOST version 1.77.0, 192GB of RAM, and gcc version 9.4.0. The receptor was processed using the prepare\_receptor module from ADFRsuite-1.0 (http://ccsb.scripps.edu/adfr/downloads/), which removes water molecules, adds hydrogens, and assigns charges. The ligand was prepared using the mk\_prepare\_ligand.py script from Meeko (http://github.com/forlilab/Meeko), which performs hydrogen addition and charge assignment with the following command: -i ligand.sdf -o ligand.pdbqt. The receptor's docking center and box size were set to default values.
 ### The Acceleration and Accuracy of Vina-CUDA and its derivatives
 * The runtime acceleration of Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA comprae with the Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W-GPU 2.1 in [Autodock-GPU](https://enodo.org/records/4031961), [CASF-2016](https://www.pdbbind.org.cn/index.php), [PPARG, Astex, and PoseBuster](https://github.com/dptech-corp/Uni-Dock-Benchmarks) librarys.
 ![Vina-CUDA](./image/docking_runtime_for_program_update.png)
@@ -45,12 +46,12 @@ Hardware: Intel(R) Core(TM) i9-10980XE CPU @ 3.00GHz with 18 cores (36 threads).
 ### Windows
 The usage on the Windows platform can be referenced from the Vina-GPU 2.1 [documentation](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1?tab=readme-ov-file#windows) .
 
-## Multi_GPU_docking
+## Multi_GPU_docking Usage
 1. cd `Multi_GPU_Docking_Procedure` folder and open the `Multi_GPU_docking.py` file;
 2. Configuring the absolute path of the docking program, the small molecule library path , the protein path , the GPU_ID value, and the thread value; (**Note**: Proteins and ligands are pdbqt files that have been processed in advance.)
 3. Save the `Multi_GPU_docking.py` file and type ` python3 Multi_GPU_docking.py`. after runing, check the `output` folder.
 
-## Usage
+## Command Usage Notes
 |Arguments| Description|Default value
 |--|--|--|
 |--config | the config file (in .txt format) that contains all the following arguments for the convenience of use| no default
