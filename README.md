@@ -1,8 +1,7 @@
 # Vina-CUDA
 ## Introduction
 In this project, we propose **Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA** based on [Vina-GPU 2.1, QuickVina2-GPU 2.1, and QuickVina-W-GPU 2.1](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1), which aims to further enhance Vina-GPU 2.1 and its variants docking speed by optimizing its core algorithms through deep utilization of GPU hardware features, thereby reducing the cost of virtual screening and increasing the efficiency of drug design. 
-<img src="./image/Vina-CUDA.png" alt="Vina-CUDA" width="600" />
-[![Vina-CUDA](./image/Vina-CUDA.png)](./image/Vina-CUDA.png)
+![Vina-CUDA](./image/Vina-CUDA.png)]
 
 ## Case Study
 The AutoDock-GPU dataset includes diverse compounds from databases such as CASF-2013 and PDB, spanning a wide range of ligand complexities and target characteristics. It has been widely used in studies as it provides a comprehensive assessment of molecular docking program's performance and accuracy. 
@@ -10,6 +9,7 @@ The AutoDock-GPU dataset includes diverse compounds from databases such as CASF-
 Software: CUDA version 12.2, BOOST version 1.77.0, 192GB of RAM, and gcc version 9.4.0. The receptor was processed using the prepare\_receptor module from ADFRsuite-1.0 (http://ccsb.scripps.edu/adfr/downloads/), which removes water molecules, adds hydrogens, and assigns charges. The ligand was prepared using the mk\_prepare\_ligand.py script from Meeko (http://github.com/forlilab/Meeko), which performs hydrogen addition and charge assignment with the following command: -i ligand.sdf -o ligand.pdbqt. The receptor's docking center and box size were set to default values.
 ### The Acceleration and Accuracy of Vina-CUDA and its derivatives
 * The runtime acceleration of Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA comprae with the Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W-GPU 2.1 in [Autodock-GPU](https://enodo.org/records/4031961), [CASF-2016](https://www.pdbbind.org.cn/index.php), [PPARG, Astex, and PoseBuster](https://github.com/dptech-corp/Uni-Dock-Benchmarks) librarys.
+<img src="./image/docking_runtime_for_program_update.png" alt="Vina-CUDA" width="600" />
 ![Vina-CUDA](./image/docking_runtime_for_program_update.png)
 * Accuracy comparison of Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA on AutoDock-GPU dataset.
 ![Vina-CUDA](./image/Autodck-GPU-RSMD-SCORE-Result.png)
