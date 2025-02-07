@@ -1,7 +1,7 @@
 # Vina-CUDA
 ## Introduction
 In this project, we propose **Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA** based on [Vina-GPU 2.1, QuickVina2-GPU 2.1, and QuickVina-W-GPU 2.1](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1), which aims to further enhance Vina-GPU 2.1 and its variants docking speed by optimizing its core algorithms through deep utilization of GPU hardware features, thereby reducing the cost of virtual screening and increasing the efficiency of drug design. 
-![Vina-CUDA](./image/Vina-CUDA.png)]
+![Vina-CUDA](./image/Vina-CUDA.png)
 
 ## Case Study
 The AutoDock-GPU dataset includes diverse compounds from databases such as CASF-2013 and PDB, spanning a wide range of ligand complexities and target characteristics. It has been widely used in studies as it provides a comprehensive assessment of molecular docking program's performance and accuracy. 
