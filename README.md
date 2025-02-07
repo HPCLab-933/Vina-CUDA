@@ -3,13 +3,16 @@
 In this project, we propose **Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA** based on [Vina-GPU 2.1, QuickVina2-GPU 2.1, and QuickVina-W-GPU 2.1](https://github.com/DeltaGroupNJUPT/Vina-GPU-2.1), which aims to further enhance Vina-GPU 2.1 and its variants docking speed by optimizing its core algorithms through deep utilization of GPU hardware features, thereby reducing the cost of virtual screening and increasing the efficiency of drug design. 
 ![Vina-CUDA](./image/Vina-CUDA.png)
 
-## The Acceleration and Accuracy of Vina-CUDA
-* The runtime acceleration of Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA comprae with the Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W-GPU 2.1 in Autodock-GPU, CASF-2016, PPARG, Astex, and PoseBuster librarys.
+## CASE STUDY
+### Environment and Parameter Configuration
+Hardware: Intel(R) Core(TM) i9-10980XE CPU @ 3.00GHz with 18 cores (36 threads). System: Ubuntu 20.04.6 LTS. GPU model: Nvidia GeForce RTX 3090 with 32GB of memory. Software: CUDA version 12.2, BOOST version 1.77.0, 192GB of RAM, and gcc version 9.4.0. The receptor was processed using the prepare\_receptor module from ADFRsuite-1.0 (http://ccsb.scripps.edu/adfr/downloads/), which removes water molecules, adds hydrogens, and assigns charges. The ligand was prepared using the mk\_prepare\_ligand.py script from Meeko (http://github.com/forlilab/Meeko), which performs hydrogen addition and charge assignment with the following command: -i ligand.sdf -o ligand.pdbqt. The receptor's docking center and box size were set to default values. Benchmark: [Autodock-GPU](https://enodo.org/records/4031961), [CASF-2016](https://www.pdbbind.org.cn/index.php), [PPARG, Astex, and PoseBuster](https://github.com/dptech-corp/Uni-Dock-Benchmarks) librarys.
+### The Acceleration and Accuracy of Vina-CUDA and its derivatives
+* The runtime acceleration of Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA comprae with the Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W-GPU 2.1 in [Autodock-GPU](https://enodo.org/records/4031961), [CASF-2016](https://www.pdbbind.org.cn/index.php), [PPARG, Astex, and PoseBuster](https://github.com/dptech-corp/Uni-Dock-Benchmarks) librarys.
 ![Vina-CUDA](./image/docking_runtime_for_program_update.png)
 * Accuracy comparison of Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA on AutoDock-GPU dataset.
 ![Vina-CUDA](./image/Autodck-GPU-RSMD-SCORE-Result.png)
- ## Compiling and Running Methods
- ### Linux
+ ## Tutorials
+ ### Compiling and Running for Linux
  **Note**: At least 8M stack size is needed. To change the stack size, use `ulimit -s 8192`.
  #### 1.Common configuration
  1. install [boost library](https://www.boost.org/) (Current Version is 1.77.0)
