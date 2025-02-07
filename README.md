@@ -10,7 +10,7 @@ Software: CUDA version 12.2, BOOST version 1.77.0, 192GB of RAM, and gcc version
 ### The Acceleration and Accuracy of Vina-CUDA and its derivatives
 * The runtime acceleration of Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA comprae with the Vina-GPU 2.1, QuickVina 2-GPU 2.1 and QuickVina-W-GPU 2.1 in [Autodock-GPU](https://enodo.org/records/4031961), [CASF-2016](https://www.pdbbind.org.cn/index.php), [PPARG, Astex, and PoseBuster](https://github.com/dptech-corp/Uni-Dock-Benchmarks) librarys.
 <img src="./image/docking_runtime_for_program_update.png" alt="Vina-CUDA" width="600" />
-![Vina-CUDA](./image/docking_runtime_for_program_update.png)
+[![Vina-CUDA](./image/docking_runtime_for_program_update.png)](./image/docking_runtime_for_program_update.png)
 * Accuracy comparison of Vina-CUDA, QuickVina2-CUDA, and QuickVina-W-CUDA on AutoDock-GPU dataset.
 ![Vina-CUDA](./image/Autodck-GPU-RSMD-SCORE-Result.png)
  ## Tutorials
