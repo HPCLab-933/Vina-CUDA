@@ -50,6 +50,7 @@ The usage on the Windows platform can be referenced from the Vina-GPU 2.1 [docum
 1. cd `Multi_GPU_Docking_Procedure` folder and open the `Multi_GPU_docking.py` file;
 2. Configuring the absolute path of the docking program, the small molecule library path , the protein path , the GPU_ID value, and the thread value; (**Note**: Proteins and ligands are pdbqt files that have been processed in advance.)
 3. Save the `Multi_GPU_docking.py` file and type ` python3 Multi_GPU_docking.py`. after runing, check the `output` folder.
+(**Note**: Multi_GPU_docking scripts based on [PyVina]https://github.com/Pixelatory/PyVina)
 
 ## Command Usage Notes
 |Arguments| Description|Default value
