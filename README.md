@@ -76,5 +76,6 @@ The usage on the Windows platform can be referenced from the Vina-GPU 2.1 [docum
 - 2025-01-10: Release [Vina-CUDA v1.1] (added optimized BFGS optimization algorithm).
 
 ## Citation
+* Li, C.; Wang, Y.; Xing, H.; Wang, Y.; Wang, Y.; Ye, J. Vina-CUDA: An Efficient Program with in-Depth Utilization of GPU to Accelerate Molecular Docking. J. Chem. Inf. Model. 2025, DOI: 10.1021/acs.jcim.4c01933.
 * Trott, Oleg, and Arthur J. Olson. "AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading." Journal of computational chemistry 31.2 (2010): 455-461.
 * Tang S, Ding J, Zhu X, et al. Vina-GPU 2.1: towards further optimizing docking speed and precision of AutoDock Vina and its derivatives[J]. IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2024.
